@@ -11,7 +11,7 @@ function db_connect() {
 //    mysqli_set_charset($conn, "utf8");
     
 }
-
+// fuck
 //Thực thi chuổi truy vấn
 function db_query($query_string) {
     global $conn;
