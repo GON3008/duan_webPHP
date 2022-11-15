@@ -76,7 +76,7 @@
 					<!--begin::Menu Nav-->
 					<ul class="menu-nav">
 						<li class="menu-item menu-item-active" aria-haspopup="true">
-							<a href="/shop.projectmvc.vn/?role=admin" class="menu-link">
+							<a href="/du_an_1_poly_hotel/?role=admin" class="menu-link">
 								<span class="svg-icon menu-icon">
 									<!--begin::Svg Icon | path:assets/media/svg/icons/Design/Layers.svg-->
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -97,7 +97,7 @@
 						</li>
 						
 						<li class="menu-item" aria-haspopup="true">
-							<a href="/shop.projectmvc.vn/?role=admin&mod=category" class="menu-link">
+							<a href="/du_an_1_poly_hotel/?role=admin&mod=category" class="menu-link">
 								<span class="svg-icon menu-icon">
 									<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-left-panel-2.svg-->
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -114,7 +114,7 @@
 						</li>
 						
 						<li class="menu-item" aria-haspopup="true">
-							<a href="/shop.projectmvc.vn/?role=admin&mod=production" class="menu-link">
+							<a href="/du_an_1_poly_hotel/?role=admin&mod=production" class="menu-link">
 								<span class="svg-icon menu-icon">
 									<!--begin::Svg Icon | path:assets/media/svg/icons/Layout/Layout-left-panel-2.svg-->
 									<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

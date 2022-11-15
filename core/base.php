@@ -220,7 +220,7 @@ function get_auth()
 function request_auth($isLogin = true)
 {
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '/shop.projectmvc.vn/?role=admin&mod=auth' : '/shop.projectmvc.vn/?role=admin'));
+        header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role=admin&mod=auth' : '/du_an_1_poly_hotel/?role=admin'));
         die;
     }
 }
