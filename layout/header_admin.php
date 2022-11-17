@@ -5,8 +5,8 @@
 <!--begin::Header Mobile-->
 <div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 	<!--begin::Logo-->
-	<a href="index.html">
-		<img alt="Logo" src="assets/media/logos/logo-light.png" />
+	<a href="/du_an_poly_hotel/?role=admin">
+		<img alt="Logo" src="public/image/logopolyhotel.png" width="50" />
 	</a>
 	<!--end::Logo-->
 	<!--begin::Toolbar-->
@@ -48,8 +48,8 @@
 			<!--begin::Brand-->
 			<div class="brand flex-column-auto" id="kt_brand">
 				<!--begin::Logo-->
-				<a href="index.html" class="brand-logo">
-					<img alt="Logo" src="assets/media/logos/logo-light.png" />
+				<a href="/du_an_1_poly_hotel/?role=admin" class="brand-logo">
+					<img alt="Logo" src="public/image/logopolyhotel.png" width="70" />
 				</a>
 				<!--end::Logo-->
 				<!--begin::Toggle-->
@@ -190,7 +190,9 @@
 									</svg>
 									<!--end::Svg Icon-->
 								</span>
+								
 								<span class="menu-text">Quản lý hoá đơn</span>
+							
 							</a>
 						</li>
 
@@ -222,7 +224,7 @@
 									</a>
 								</li>
 								<li class="menu-item menu-item-submenu" data-menu-toggle="click" aria-haspopup="true">
-									<a href="javascript:;" class="menu-link menu-toggle">
+									<a href="/du_an_1_poly_hotel/?role=client" class="menu-link menu-toggle">
 										<span class="menu-text">Trang khách hàng</span>
 										<i class="menu-arrow"></i>
 									</a>

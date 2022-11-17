@@ -8,7 +8,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -27,7 +27,7 @@
     <!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href=""><img src="public/image/logo-removebg-preview.png" class="" width="90"
+            <a class="navbar-brand" href=""><img src="public/image/logopolyhotel.png" class="" width="90"
                     alt=""></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarContent">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Trang chủ<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client">Trang chủ<span class="sr-only">(current)</span></a>
                     </li>
 
                     
@@ -64,19 +64,26 @@
                         <a class="nav-link" href="#">Liên hệ</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto">
+                <?php if(isset($_SESSION['auth'])){ ?>
+                    <ul class="navbar-nav ml-auto">
+                       <a href="" style="margin-right:10px;"><span class="rounded-circle"> <i class="fa-solid fa-heart" style="color:white; margin:7px 0px 0px 5px ; font-size:22px;"></i></span></a> 
+                        <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation"><span class="rounded-circle pl-1"> <i style="color:white; font-size:22px; margin:5px 0px 0px 3px ;" class="fa-regular fa-user"></i></span></a>
+                        
+                    </ul>
+                    <?php }else{ ?>
+                        <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="dangky.html">Đăng ký</a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up">Đăng ký</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="dangnhap.html">Đăng nhập</a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=auth">Đăng nhập</a>
                     </li>
                 </ul>
+                        <?php } ?>
+               
 
-                <!-- <br>
-            <span class="rounded-circle"> <i class="fa-solid fa-cart-plus"></i></span>
-            <span class="rounded-circle pl-1"> <i class="fa-regular fa-user"></i></span>
-         -->
+                
+
             </div>
         </div>
     </nav>

@@ -306,3 +306,17 @@ footer {
     margin-left: 5%;
     margin-bottom: 50px;
 }
+.user3{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-gap: 10px;
+    margin-top: 20px;
+    padding: 100px;
+    box-sizing: border-box;
+    border: 0px solid;
+    padding: 50px;
+    background-color: #FFFAFA;
+    width: 90%;
+    margin-left: 5%;
+    margin-bottom: 50px;
+}
