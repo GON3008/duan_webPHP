@@ -103,17 +103,44 @@ function changePasswordAction(){
     ]);
 }
 function saveChangePasswordPostAction(){
-    $id=$_GET['id'];
+    global $conn;
+    // $id=$_GET['id'];
     $email=$_POST['email'];
     $password_old=$_POST['password_old'];
     $password_new=$_POST['password_new'];
-    $nhaplai_password_new=$_POST['nhaplai_password_new'];
-    $item=get_auth_user($email, $password_old);
-    if($item>0){
-        $data=["email"=>$email, "password"=>$password_new];
-        update_user($data,$id);
+    // $item=get_auth_user($email, $password_old);
+    $sql="select * from users where email='$email' and password='$password_old' limit 1" ;
+    $results=mysqli_query($conn,$sql);
+    $count=mysqli_num_rows($results);
+    if($count>0){
+        $sql_update=mysqli_query($conn,"update users set email='$email' , password='$password_new' where email='$email' and password='$password_old'");
+        echo "<p> Mật khẩu đổi thành công </p>";
+    }else{
+        echo "<p> Mật khẩu đổi không thành công </p>";
     }
-   
-  
-    
+        // $data=["email"=>$email, "password"=>$password_new];
+        // update_user($data,$id); 
 }
+
+function forgotPasswordAction(){
+    $notifications = get_notification();
+    load_view('forgotPassword', [
+        "notifications" => $notifications
+    ]);
+}
+ function saveForgotPasswordPostAction(){
+    global $conn;
+    $email=$_POST['email'];
+    $sql=mysqli_query($conn,"select * from users where email='$email'");
+    $row=mysqli_fetch_array($sql);
+    // $count=mysqli_num_rows($sql);
+    if($_SESSION['auth']['email']===$email){
+        // echo $row['password'] ;
+    push_notification('success', ['Mật khẩu của bạn là:' .$row['password']]);
+    header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+    }else{
+    push_notification('success', ['Email không tồn tại']);
+    header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+
+    }
+ }

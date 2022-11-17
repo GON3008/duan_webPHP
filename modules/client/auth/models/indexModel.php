@@ -8,6 +8,11 @@ function get_user_by_id($id) {
     $item = db_fetch_row("SELECT * FROM `users` WHERE `id` = {$id}");
     return $item;
 }
+function get_user_by_email($email){
+    $item = db_fetch_row("SELECT * FROM `users` WHERE `email` = {$email}");
+    return $item;
+
+}
 function insert_user($data){
     db_insert("users", $data);
 }

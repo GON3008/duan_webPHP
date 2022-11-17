@@ -21,7 +21,7 @@
             <a href="">Danh sách yêu thích</a>
         </div>
         <div class="item2">
-            <a href="">Quên mật khẩu</a>
+            <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword">Quên mật khẩu</a>
         </div>
         <div class="item5">
             <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=logout">Đăng xuất</a>
@@ -87,7 +87,7 @@
 
                     <!-- <input class="a" type="button" value="Đổi mật khẩu"> -->
                     <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword" class="b btn btn-primary">Đổi mật khẩu</a>
-                    <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=edit&id=<?= $_SESSION['auth']['id'] ?>" class="b btn btn-primary">Chính sửa</a>
+                    <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=edit&id=<?= $_SESSION['auth']['id'] ?>" class="b btn btn-primary">Chỉnh sửa</a>
                     <!-- <input class="b" type="button" value="Chỉnh sửa"> -->
                 </div>
             </div>
