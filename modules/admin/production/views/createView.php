@@ -24,7 +24,7 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="">
+            <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=production&action=saveCreate" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
@@ -69,25 +69,8 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col col-3">
-                            <div class="form-group">
-                                <div><label>Hình ảnh đại diện</label></div>
-                                <div class="image-input image-input-outline" id="kt_image_1">
-                                    <div class="image-input-wrapper" style="background-image: url(assets/media/users/100_1.jpg)"></div>
-
-                                    <label class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="change" data-toggle="tooltip" title="" data-original-title="Thay đổi">
-                                        <i class="fa fa-pen icon-sm text-muted"></i>
-                                        <input type="file" name="thumb" accept=".png, .jpg, .jpeg" />
-                                        <input type="hidden" name="thumb_remove" />
-                                    </label>
-
-                                    <span class="btn btn-xs btn-icon btn-circle btn-white btn-hover-text-primary btn-shadow" data-action="cancel" data-toggle="tooltip" title="Xoá ảnh đại diện">
-                                        <i class="ki ki-bold-close icon-xs text-muted"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col col-9">
+                        
+                        <!-- <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
                                 <div class="dropzone-msg dz-message needsclick">
@@ -95,6 +78,10 @@
                                     <span class="dropzone-msg-desc">Chỉ chấp nhận tải lên file hình ảnh</span>
                                 </div>
                             </div>
+                        </div> -->
+                        <div class="col col-9">
+                            <div><label for="">Hình ảnh sản phẩm</label></div>
+                            <input type="file" name="image" id="">
                         </div>
                     </div>
                 </div>
