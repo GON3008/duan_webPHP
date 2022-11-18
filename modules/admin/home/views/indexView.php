@@ -1,3 +1,8 @@
+
+
+<?php if(isset($_SESSION['auth']) && ($_SESSION['auth']['role']==0) ){ 
+    header("location:/du_an_1_poly_hotel/?role=client");   
+}?>
 <?php get_header('', 'Tổng quan') ?>
 
     <!--begin::Subheader-->
@@ -7,6 +12,7 @@
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
                 <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tổng quan</h5>
+               
                 <!--end::Page Title-->
             </div>
             <!--end::Info-->

@@ -30,3 +30,8 @@ function indexPostAction() {
         header('Location: /du_an_1_poly_hotel/?role=admin&mod=auth');
     }
 }
+function signoutAction(){
+    session_unset();
+    // unset($_SESSION['auth']);
+    header('Location: /du_an_1_poly_hotel/?role=admin');
+}
