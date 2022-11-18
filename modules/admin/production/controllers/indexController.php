@@ -63,7 +63,7 @@ function deleteAction() {
 
 function updateAction()
 {
-    $id = $_GET['id_prod'];
+    $id = $_GET['id'];
     $production = get_one_production($id);
     $data['production' ] = $production;
     $categories=get_list_categories();
@@ -78,12 +78,12 @@ function updateAction()
 }
 
 function updatePostAction() {
-    $id = $_POST['id_prod'];
-    $production = get_one_production($id);
-    if (!$production) {
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
-        die();
-    }
+    $id = $_POST['id'];
+    // $production = get_one_production($id);
+    // if (!$production) {
+    //     header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
+    //     die();
+    // }
     $categories=$_POST['category_id'];
     $name=$_POST['name'];
     $count=$_POST['count'];
@@ -93,8 +93,16 @@ function updatePostAction() {
     $target_dir = "./upload/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
-    
-    update_production($id, $name, $description,$target_file,$count,$price,$categories);
+    if($_FILES["image"]["size"]!=0){
+        $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count, "price"=>$price, "image"=>$target_file, "category_id"=>$categories];
+        // update_production($id, $name, $description,$target_file,$count,$price,$categories);
+
+    }else{
+    //update_production($id, $name, $description,$target_file,$count,$price,$categories);
+    $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count, "price"=>$price, "category_id"=>$categories];
+
+    }
+    update_production($data,$id);
     push_notification('success', ['Chỉnh sửa phòng thành công']);
     header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
 }

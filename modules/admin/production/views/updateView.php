@@ -1,4 +1,5 @@
 
+
 <?php get_header('', 'Chỉnh sửa sản phẩm') ?>
 
 <!--begin::Subheader-->
@@ -29,14 +30,28 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Danh mục sản phẩm</label>
+            <input type="hidden" value="<?=$production['id']?>" name="id">
+                        
                         <select class="form-control select2" name="category_id">
                             <?php foreach ($categories as $category) {
-                                if ($categories == $category["id"]) {
-                                    echo '<option  value="' . $category['id'] . '" selected> ' . $category['name'] . '</option>';
-                                }else{
+                                if ($production['category_id'] == $category["id"]) {
+                                    echo '<option  value="' . $category['id'] . '" selected=selected> ' . $category['name'] . '</option>';
+                                } else {
                                     echo '<option  value="' . $category['id'] . '" > ' . $category['name'] . '</option>';
                                 }
                             } ?>
+
+                            <!-- <?php foreach ($categories as $category) : ?>
+                                <option value="<?= $category['id'] ?>" <?= $category['id'] == $production['category_id'] ? "selected=selected" : "" ?>>
+                                    <?= $category['name'] ?>
+                                </option>
+                            <?php endforeach ?> -->
+
+                            <!-- <?php foreach ($categories as $category) :?>
+                                <option value="<?= $category['id'] ?>" <?= $category['id'] == $production['category_id'] ? "selected=selected" : "" ?>>
+                                <?= $category['name'] ?>
+                            </option>
+                                <?php endforeach ?> -->
                         </select>
                     </div>
                     <div class="form-group">
@@ -51,7 +66,7 @@
                     </div>
                     <div class="form-group">
                         <label>Số lượng phòng</label>
-                        <input type="text" name="name" class="form-control" placeholder="Nhập vào số lượng phòng" value="<?php echo $production['count'] ?>" />
+                        <input type="text" name="count" class="form-control" placeholder="Nhập vào số lượng phòng" value="<?php echo $production['count'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group">
