@@ -1,11 +1,12 @@
 <?php
 
 function construct() {
-    // request_auth(true);
+   // request_auth(true);
     load_model('index');
 }
 
 function indexAction() {
+    // request_auth(true);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications
@@ -14,6 +15,7 @@ function indexAction() {
 
 
 function indexPostAction() {
+    // request_auth(true);
     // validation
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -32,10 +34,14 @@ function indexPostAction() {
     }
 }
 function infomationAction() {
+    request_auth(true);
     load_view('infomation');
+    header('Location: /du_an_1_poly_hotel/?role=client');
+   
 }
 
 function logoutAction(){
+    request_auth(true);
     session_unset();
     // unset($_SESSION['auth']);
     header('Location: /du_an_1_poly_hotel/?role=client');
@@ -76,6 +82,7 @@ function saveSignUpPostAction(){
 }
 
 function editAction(){
+    request_auth(true);
     $id=$_GET['id'];
     $item=get_user_by_id($id);
     $data['list_users'] = $item;
@@ -84,6 +91,7 @@ function editAction(){
    
 }
 function saveEditPostAction(){
+    request_auth(true);
     $id=$_GET['id'];
     $full_name=$_POST['full_name'];
     $email=$_POST['email'];
@@ -98,12 +106,14 @@ function saveEditPostAction(){
 
 }
 function changePasswordAction(){
+    request_auth(true);
     $notifications = get_notification();
     load_view('changePassword', [
         "notifications" => $notifications
     ]);
 }
 function saveChangePasswordPostAction(){
+    request_auth(true);
     global $conn;
     // $id=$_GET['id'];
     $email=$_POST['email'];
@@ -124,12 +134,14 @@ function saveChangePasswordPostAction(){
 }
 
 function forgotPasswordAction(){
+    request_auth(true);
     $notifications = get_notification();
     load_view('forgotPassword', [
         "notifications" => $notifications
     ]);
 }
  function saveForgotPasswordPostAction(){
+    request_auth(true);
     global $conn;
     $email=$_POST['email'];
     $sql=mysqli_query($conn,"select * from users where email='$email'");
