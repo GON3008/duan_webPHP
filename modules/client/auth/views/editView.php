@@ -27,7 +27,7 @@
             <input id="my-input" class="form-control" type="radio" name="gender" > Nữ
         </div> -->
         
-        <button type="submit" class="btn btn-primary col-lg-6 col-md-6 col-sm-6 mx-auto">Cập nhật</button>
+        <button type="submit" class="btn btn-primary col-lg-6 col-md-6 col-sm-12 mx-auto">Cập nhật</button>
         
 </div>
 </div>
