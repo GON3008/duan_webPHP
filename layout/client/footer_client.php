@@ -75,7 +75,7 @@
                     <h2>Liên hệ</h2>
                     <a href="" class="text1">Email: thuytxph26691@fpt.edu.vn</a> <br>
                     <a href="" class="text1">Phone: 0387976086</a><br>
-                    <a href="" class="text1">Đường Trịnh Văn Bô, Hà Nội</a><br>
+                    <a href="" class="text1">Địa chỉ: Đường Trịnh Văn Bô, Hà Nội</a><br>
 
                 </div>
             </div>

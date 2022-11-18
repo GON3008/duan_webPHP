@@ -220,8 +220,13 @@ function get_auth()
 function request_auth($isLogin = true)
 {
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role=admin&mod=auth' : '/du_an_1_poly_hotel/?role=admin'));
+        // header("Location: /du_an_1_poly_hotel/?role=admin&mod=auth ");
+        header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role=client&mod=auth' : '/du_an_1_poly_hotel/?role=admin&mod=auth'));
         die;
+    // }else{
+    //     header("Location: /du_an_1_poly_hotel/?role=admin&mod=auth");
+       
+
     }
 }
 

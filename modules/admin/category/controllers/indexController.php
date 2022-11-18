@@ -1,16 +1,18 @@
 <?php
 
 function construct() {
-    request_auth();
+    request_auth(false);
     load_model('index');
 }
 
 function indexAction() {
+    request_auth(false);
     $data['categories'] = get_list_categories();
     load_view('index', $data);
 }
 
 function createAction() {
+    
     load_view('create');
 }
 
