@@ -35,9 +35,13 @@
                             <div class="form-group">
                                 <label>Danh mục sản phẩm</label>
                                 <select class="form-control select2" name="category_id">
-                                    <?php foreach ($categories as $category) : ?>
-                                        <option value="<?php echo $category['id'] ?>"><?php echo $category['name'] ?></option>
-                                    <?php endforeach ?>
+                                    <?php
+                                    foreach ($categories as $category) {
+                                        //extract($danhmuc);
+                                        if ($categories == $category['id']) echo '<option value="' . $category['id'] . '" selected > ' . $category['name'] . ' </optinon>';
+                                        else echo '<option value="' . $category['id'] . '"  > ' . $category['name'] . ' </optinon>';
+                                    } ?>
+                                 
                                 </select>
                             </div>
                             <div class="form-group mb-1">
@@ -69,7 +73,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <!-- <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">

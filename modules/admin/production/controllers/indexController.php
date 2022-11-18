@@ -64,9 +64,10 @@ function deleteAction() {
 function updateAction()
 {
     $id = $_GET['id_prod'];
-    // $categories= get_one_category($id);
     $production = get_one_production($id);
-    $data['production'] = $production;
+    $data['production' ] = $production;
+    $categories=get_list_categories();
+    $data['categories']= $categories;
     // $data1['category'] = $categories;
 
     if ($production) {
@@ -77,7 +78,7 @@ function updateAction()
 }
 
 function updatePostAction() {
-    $id = $_GET['id_prod'];
+    $id = $_POST['id_prod'];
     $production = get_one_production($id);
     if (!$production) {
         header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
