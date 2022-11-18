@@ -87,6 +87,7 @@ function saveEditPostAction(){
     $id=$_GET['id'];
     $full_name=$_POST['full_name'];
     $email=$_POST['email'];
+    
     $numberphone=$_POST['numberphone'];
     $cmnd=$_POST['cmnd'];
     $data=["full_name"=>$full_name, "email"=> $email, "numberphone"=>$numberphone, "cmnd"=>$cmnd];
