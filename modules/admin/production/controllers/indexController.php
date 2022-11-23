@@ -1,16 +1,17 @@
 <?php
 
 function construct() {
-    request_auth();
     load_model('index');
 }
 
 function indexAction() {
+    request_auth(true);
     $data['productions'] = get_list_productions();
     load_view('index', $data);
 }
 
 function createAction() {
+    request_auth(true);
     $data['categories'] = get_list_categories();
     load_view('create', $data);
     load_view('create');
@@ -37,6 +38,7 @@ function createAction() {
 
 
 function saveCreatePostAction() {
+    request_auth(true);
     $categories=$_POST['category_id'];
     $name=$_POST['name'];
     $count=$_POST['count'];
@@ -55,6 +57,7 @@ function saveCreatePostAction() {
 }
 
 function deleteAction() {
+    request_auth(true);
     $id = $_GET['id_prod'];
     delete_production($id);
     push_notification('success', ['Xoá phòng thành công']);
@@ -63,6 +66,7 @@ function deleteAction() {
 
 function updateAction()
 {
+    request_auth(true);
     $id = $_GET['id'];
     $production = get_one_production($id);
     $data['production' ] = $production;
@@ -78,6 +82,7 @@ function updateAction()
 }
 
 function updatePostAction() {
+    request_auth(true);
     $id = $_POST['id'];
     // $production = get_one_production($id);
     // if (!$production) {

@@ -1,11 +1,12 @@
 <?php
 
 function construct() {
-    // request_auth(false);
+   // request_auth(false);
     load_model('index');
 }
 
 function indexAction() {
+    //request_auth(false);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications
@@ -13,6 +14,7 @@ function indexAction() {
 }
 
 function indexPostAction() {
+        // request_auth(false);
     // validation
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -22,16 +24,16 @@ function indexPostAction() {
     }
     // xử lý đăng nhập
     $auth = get_auth_user($username, $password);
-    if ($auth) {
+    if ($auth && $auth['role'] == 2) {
         push_auth($auth);
-        header('Location: /du_an_1_poly_hotel/?role=admin');
+        header('Location:/du_an_1_poly_hotel/?role=admin');
     } else {
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=auth');
+        header('Location:/du_an_1_poly_hotel/?role=admin&mod=auth');
     }
 }
-function signoutAction(){
-    session_unset();
-    // unset($_SESSION['auth']);
-    header('Location: /du_an_1_poly_hotel/?role=admin');
+function logoutAction(){
+    
+    remove_auth();
+    header('Location: /du_an_1_poly_hotel/?role=admin&mod=auth');
 }

@@ -1,22 +1,25 @@
 <?php
 
 function construct() {
-    request_auth(false);
+  // request_auth(false);
     load_model('index');
 }
 
 function indexAction() {
-    request_auth(false);
+    request_auth(true);
+
     $data['categories'] = get_list_categories();
     load_view('index', $data);
 }
 
 function createAction() {
-    
+   request_auth(true);
     load_view('create');
 }
 
 function createPostAction() {
+    request_auth(true);
+
     $name = $_POST['name'];
     $description = $_POST['description'];
     if (empty($name)) {
@@ -30,6 +33,7 @@ function createPostAction() {
 }
 
 function deleteAction() {
+    request_auth(true);
     $id = $_GET['id_cate'];
     delete_category($id);
     push_notification('success', ['Xoá danh mục sản phẩm thành công']);
@@ -38,6 +42,8 @@ function deleteAction() {
 
 function updateAction()
 {
+    request_auth(true);
+
     $id = $_GET['id_cate'];
     $cate = get_one_category($id);
     $data['category'] = $cate;
@@ -49,6 +55,8 @@ function updateAction()
 }
 
 function updatePostAction() {
+       request_auth(true);
+
     $id = $_GET['id_cate'];
     $cate = get_one_category($id);
     if (!$cate) {

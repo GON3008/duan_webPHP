@@ -1,4 +1,6 @@
+
 <?php require "layout/client/header_client.php" ?>
+
 
 <div class="user">
     <div class="user1">
@@ -8,7 +10,7 @@
         </div>
         <div class="item2">
             <?php
-            if (($_SESSION['auth']['role']) == 1) { ?>
+            if (($_SESSION['auth']['role']) == 2) { ?>
                 <a href="/du_an_1_poly_hotel/?role=admin">Đăng nhập trang quản trị</a>
             <?php } ?>
 

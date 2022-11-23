@@ -1,19 +1,17 @@
 <?php
 
 function construct() {
-   // request_auth(true);
+//    
     load_model('index');
 }
 
 function indexAction() {
-    // request_auth(true);
+    //  request_auth(true);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications
     ]);
 }
-
-
 function indexPostAction() {
     // request_auth(true);
     // validation
@@ -33,18 +31,41 @@ function indexPostAction() {
         header('Location: /du_an_1_poly_hotel/?role=client&mod=auth');
     }
 }
+
+// function indexPostAction() {
+//     // request_auth(true);
+//     // validation
+//     $email = $_POST['email'];
+//     $password = $_POST['password'];
+//     if (empty($email) || empty($password)) {
+//         push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu']);
+//         header('Location: /du_an_1_poly_hotel/?role=client&mod=auth');
+//     }
+//     // xử lý đăng nhập
+//     $auth = get_auth_user($email, $password);
+//     if ($auth && $auth['role'] == 1) {
+//         push_auth($auth);
+//         header('Location: /du_an_1_poly_hotel/?role=client');
+//     } else {
+//         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
+//         header('Location: /du_an_1_poly_hotel/?role=client&mod=auth');
+//     }
+// }
 function infomationAction() {
     request_auth(true);
     load_view('infomation');
-    header('Location: /du_an_1_poly_hotel/?role=client');
+    header('Location:/du_an_1_poly_hotel/?role=client');
    
 }
 
 function logoutAction(){
     request_auth(true);
-    session_unset();
-    // unset($_SESSION['auth']);
-    header('Location: /du_an_1_poly_hotel/?role=client');
+    // session_unset();
+    
+    // header('Location: /du_an_1_poly_hotel/?role=client');
+    
+    remove_auth();
+    header('Location:/du_an_1_poly_hotel /?role=client');
 }
 function sign_upAction() {
     $notifications = get_notification();
@@ -53,6 +74,8 @@ function sign_upAction() {
     ]);
 }
 function saveSignUpPostAction(){
+    
+    request_auth(true);
     $full_name=$_POST['full_name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
@@ -83,6 +106,7 @@ function saveSignUpPostAction(){
 
 function editAction(){
     request_auth(true);
+    
     $id=$_GET['id'];
     $item=get_user_by_id($id);
     $data['list_users'] = $item;

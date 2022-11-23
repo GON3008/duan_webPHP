@@ -69,7 +69,8 @@
                             <span class="navi-text text-muted text-hover-primary">jm@softplus.com</span>
                         </span>
                     </a>
-                    <a href="/du_an_1_poly_hotel/?role=admin&mod=auth&action=signout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="/du_an_1_poly_hotel/?role=admin&mod=auth&action=logout" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="/du_an_1_poly_hotel/?role=admin&mod=auth&action=logout">Thoats</a>
                 </div>
             </div>
         </div>
