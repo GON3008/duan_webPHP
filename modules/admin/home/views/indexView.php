@@ -1,8 +1,10 @@
 
+<!-- 
+<?php //if(isset($_SESSION['auth']) && ($_SESSION['auth']['role']== 1) ){ 
+    //header("location:/du_an_1_poly_hotel/?role=client");   
+//}
 
-<?php if(isset($_SESSION['auth']) && ($_SESSION['auth']['role']==0) ){ 
-    header("location:/du_an_1_poly_hotel/?role=client");   
-}?>
+?> -->
 <?php get_header('', 'Tổng quan') ?>
 
     <!--begin::Subheader-->
