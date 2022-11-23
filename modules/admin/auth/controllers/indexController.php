@@ -1,7 +1,7 @@
 <?php
 
 function construct() {
-    request_auth(false);
+    // request_auth(false);
     load_model('index');
 }
 
