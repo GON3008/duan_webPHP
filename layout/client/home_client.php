@@ -11,7 +11,6 @@
             <div class="carousel-item active">
                 <img class="d-block w-100" src="public/image/banner1.png" alt="">
                 <div class="carousel-caption d-none d-md-block">
-
                 </div>
             </div>
             <div class="carousel-item">
@@ -23,7 +22,6 @@
             <div class="carousel-item">
                 <img class="d-block w-100" src="public/image/banner3.png" alt="">
                 <div class="carousel-caption d-none d-md-block">
-
                 </div>
             </div>
         </div>
@@ -46,7 +44,6 @@
                 <div class="form-group col-md-9 col-sm-12 mt-2">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <input type="text" class="form-control pl-5" id="exampleInput" placeholder="Tìm kiếm...">
-
                 </div>
                 <div class="form-group col-md-3 col-sm-12 mt-2">
                     <input type="submit" class="form-control bg-success" id="exampleInput" placeholder="Tìm kiếm..."
@@ -315,7 +312,7 @@
 
                             <div class="card swiper-slide ">
                                 <div class="card-image">
-                                    <img src="<?=$item['image'] ?>" alt="" class="img-fluid">
+                                    <img src="<?=$item['image'] ?>" alt="" class="img-fluid" width="100%">
                                 </div>
                                 
                                 <div class="card-name text col-12">
@@ -355,7 +352,7 @@
         <div class="row text-center">
             <!-- <p>Ăn uống, giặt ủi, thuê xe, spa, thu đổi ngoại tệ, dọn phòng</p> -->
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/hamburger.webp" width="100" alt=""></a> <br>
+                <a href=""><img src="public/image/hamburger.webp" width="100" height="108" alt=""></a> <br>
                 <a href="">Ăn uống</a>
             </div>
             <div class="col-md-2 col-sm-4 col-4">
@@ -363,20 +360,20 @@
                 <a href="">Giặt ủi</a>
             </div>
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/massage.png" width="100" alt=""></a> <br>
-                <a href="">massage</a>
+                <a href=""><img src="public/image/massage.png" width="100" height="108" alt=""></a> <br>
+                <a href="">Massage</a>
             </div>
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/clean.png" width="100" alt=""></a> <br>
-                <a href="">dọn dẹp</a>
+                <a href=""><img src="public/image/clean.png" width="100" height="108" alt=""></a> <br>
+                <a href="">Dọn dẹp</a>
             </div>
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/sua.png" width="100" alt=""></a> <br>
-                <a href="">sửa chữa</a>
+                <a href=""><img src="public/image/gym.png" width="100" height="110" alt=""></a> <br>
+                <a href="">Gym</a>
             </div>
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/image 25.png" class="img-fluid" alt=""></a> <br>
-                <a href="">Ăn uống</a>
+                <a href=""><img src="public/image/bar.png" width="100" height="110"  alt=""></a> <br>
+                <a href="">Quầy bar</a>
             </div>
 
         </div>

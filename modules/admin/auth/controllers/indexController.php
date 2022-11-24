@@ -1,12 +1,12 @@
 <?php
 
 function construct() {
-   // request_auth(false);
+    // request_auth(true);
     load_model('index');
 }
 
 function indexAction() {
-    //request_auth(false);
+    //request_auth(true);
     $notifications = get_notification();
     load_view('index', [
         "notifications" => $notifications
@@ -14,7 +14,7 @@ function indexAction() {
 }
 
 function indexPostAction() {
-        // request_auth(false);
+        //request_auth(true);
     // validation
     $username = $_POST['username'];
     $password = $_POST['password'];
