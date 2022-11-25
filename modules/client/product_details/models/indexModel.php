@@ -7,7 +7,6 @@ function get_list_categories() {
     $result = db_fetch_array("SELECT * FROM `categories`");
     return $result;
 }
-<<<<<<< HEAD
 // function get_one_production_cl($id,$category_id) {
 //     // $result = db_fetch_array("SELECT p.*,u.full_name as `full_name` FROM `productions` p JOIN `categories` u ON p.category_id = u.id WHERE u.category_id= $category_id AND p.id <> $id");
     
@@ -20,7 +19,7 @@ function get_list_pro_by_catid($cat)
     $result=  db_fetch_array("select * from  productions where category_id=$cat");
     return $result;
 
-=======
+}
 function get_list_comments($id) {
     $result = db_fetch_array("SELECT c.*,u.full_name as `full_name`  FROM `comments` c  JOIN `users` u ON c.created_id = u.id where c.product_id=${id} order by c.id desc");
     return $result;
@@ -31,5 +30,4 @@ function manage_comments() {
 }
 function add_comments($data){
     db_insert("comments",$data);
->>>>>>> edc1b860d9289e1d2ef411d86bd37575c02f8d0d
 }

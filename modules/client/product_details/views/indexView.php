@@ -144,7 +144,7 @@
             <tbody>
             <?php foreach ($comments as $comment):?>
               <tr>
-                <!-- <th><?= $comment['id'] ?></th> -->
+           
                 <th><?= $comment['full_name']?></th>
                 <th style="max-width: 300px;
     word-wrap: break-word;
