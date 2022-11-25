@@ -10,8 +10,7 @@ function indexAction() {
     // $data['productions'] = get_one_production($id);
     $production = get_one_production($id);
     $cat=$production['category_id'];
-    $pro_catid=get_list_pro_by_catid($cat);
-    $data['pro_cat']=$pro_catid;
+    $data['pro_cat']=get_list_pro_by_catid($cat);
     $data['productions' ] = $production;
     $categories=get_list_categories();
     $data['categories']= $categories;
