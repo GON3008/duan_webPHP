@@ -7,7 +7,6 @@ function construct() {
 
 function indexAction() {
     request_auth(true);
-
     $data['categories'] = get_list_categories();
     load_view('index', $data);
 }

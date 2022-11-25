@@ -16,6 +16,7 @@
             <label for="my-input">Số điện thoại</label>
             <input id="my-input" class="form-control" type="text" name="numberphone" value="<?= $list_users['numberphone']  ?>">
         </div>
+        
         <div class="form-group col-lg-6 col-md-6 col-sm-12 ">
             <label for="my-input">CMND</label>
             <input id="my-input" class="form-control" type="text" name="cmnd" value="<?= $list_users['cmnd']  ?>">

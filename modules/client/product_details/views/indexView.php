@@ -133,6 +133,7 @@
       <div class="row">
         <div class="col-md-12">
           <table class="table table-light">
+           
             <thead class="thead-light">
               <tr>
                 <th>Name</th>
@@ -141,24 +142,32 @@
               </tr>
             </thead>
             <tbody>
+            <?php foreach ($comments as $comment):?>
               <tr>
-                <th>Thuỷ</th>
-                <th>Trịnh Xuân Thuỷ - PH26691</th>
-                <th>11:35 PM 07/11/2022</th>
+                <!-- <th><?= $comment['id'] ?></th> -->
+                <th><?= $comment['full_name']?></th>
+                <th style="max-width: 300px;
+    word-wrap: break-word;
+    word-break: break-word;"><?= $comment['description']?></th>
+                <th><?= $comment['created_at'] ?></th>
               </tr>
+              <?php endforeach ?>
             </tbody>
-            
+           
           </table>
         </div>
       </div>
+      <form action="/du_an_1_poly_hotel/?role=client&mod=product_details&action=addComments&id=<?= $productions['id'] ?>" method="post">
       <div class="row">
           <div class=" col-md-10 mt-1">
-            <input id="my-input" class="form-control" type="text" name="" placeholder="Bình luận">
+            <input id="my-input" class="form-control" type="text" name="description" placeholder="Bình luận">
           </div>
           <div class="form-group col-md-2 mt-1">
             <input id="my-input" class=" btn btn-primary w-100" type="submit" name="" value="Gửi">
           </div>
       </div>
+      </form>
+      
     </div>
     <!--End form bình luận-->
 
