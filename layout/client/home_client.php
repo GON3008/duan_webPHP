@@ -315,7 +315,7 @@
 
                             <div class="card swiper-slide ">
                                 <div class="card-image">
-                                    <img src="<?=$item['image'] ?>" alt="" class="img-fluid">
+                                    <img src="<?=$item['image'] ?>" alt="" width="100%" class="img-fluid">
                                 </div>
                                 
                                 <div class="card-name text col-12">
