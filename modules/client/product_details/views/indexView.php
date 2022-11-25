@@ -1,4 +1,8 @@
 <?php require "layout/client/header_client.php" ?>
+<!-- <?php var_dump ($pro_cat);
+
+
+?> -->
  <!----------------------------------------------------------------------------------------------------->
     <!--Form Search-->
     <div class="container">
@@ -30,8 +34,35 @@
     <hr class="display-4" />
     <!--Trang chi tiết-->
     <div class="container mt-5">
+      <!-- <div> -->
+      <!-- <?php
+            foreach($categories as $item) :
+              // extract($item);
+              // var_dump($item);
+              // die;
+             ?>
+        
+      <input type="hidden" value="<?=$item['id']?>" name="id">
+        mã loại: <?=$item['name']?>
+
+        <?php endforeach ?>
+      </div> -->
+      <!-- <div>
+      <?php foreach ($categories as $category) {
+         if ($productions['id'] == $category["id"]) {
+        ?>
+                               
+                mã loại:   <?=$category['name']?>
+                               
+                        <?php    }
+                      } ?>
+      </div> -->
   
     <input type="hidden" value="<?=$productions['id']?>" name="id">
+    <!-- <div>
+      mã loại: <?=$productions['category_id']?>
+    </div> -->
+   
                         
     
       <div class="row">
@@ -89,154 +120,10 @@
           <?=$productions['description']?>
 
           </h5>
-          <!-- </h5>
-          Tòa nhà nằm trên khu vực Mễ Trì Hạ, gần trục đường Phạm Hùng.<br />
-
-          Cách Siêu thị BigC hơn 1 km.<br />
-
-          Phù hợp cho sinh viên, người đi làm và hộ gia đình.<br /><br />
-
-          <h5>
-            Cho thuê nhà trọ Mễ Trì Hạ full đồ tiện nghi, trang bị đồ mới,
-            không gian rộng thoáng:
-          </h5>
-
-          Đảm bảo full đồ: điều hòa, nóng lạnh, giường, tủ, bàn ghế, gương,
-          bộ tranh, thảm, kệ...<br />
-          Decor trẻ trung, hiện đại với tranh tường và cây xanh.<br />
-          Vệ sinh phòng sạch sẽ khi khách nhận phòng, đảm bảo khách có thể
-          đến ở ngay.<br />
-
-          Cửa sổ thông thoáng, đảm bảo ánh sáng tự nhiên.<br />
-
-          Phòng có ban công view đẹp.<br />
-
-          Cam kết không qua trung gian.<br /><br />
-
-          <h5>
-            Khi thuê phòng trọ Mễ Trì Hạ bạn nhận được rất nhiều ưu đãi:
-          </h5>
-
-          An ninh đảm bảo với khóa vân tay, camera an ninh an toàn tuyệt
-          đối, chỗ gửi xe rộng rãi, free.<br />
-
-          Thang máy mới, nhanh.<br />
-
-          Có nhân viên kinh nghiệm lâu năm vệ sinh tòa nhà mỗi tuần .<br />
-
-          Dịch vụ bảo trì bảo dưỡng đồ đạc định kỳ hoàn toàn miễn phí.<br />
-
-          Tặng ngay một bộ chăn, ga, gối, đệm mới tinh khi thuê nhà trong
-          tháng này.<br />
-
-          Ưu đãi đặc biệt với khách hàng kí hợp đồng 12 tháng.<br />
-
-          Đặt lịch ngay để được nhân viên hỗ trợ nhanh nhất!<br /> -->
-        </div>
-      </div>
-
-
-
-     
-      <!-- <div class="row">
-        <div class="col-md-8">
-          <div>
-            <h2>Phòng đơn - Trịnh Văn Bô, Hà Nội</h2>
-            <p>Địa chỉ: Trịnh Văn Bô, Hà Nội</p>
-          </div>
-          <div>
-            <img src="image/banner1.png" class="img-fluid" alt="" />
-          </div>
-          
           
         </div>
-
-        <div class="col-md-4 mt-3">
-          <div class="card" style="width: 100%;">
-         
-            <div class="card-body">
-             
-                <div class="form-group">
-                  <label for="my-input">Ngày nhận phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="">
-                </div>
-                <div class="form-group">
-                  <label for="my-input">Ngày trả phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="">
-                </div>
-
-              <div class="mt-3 text-danger">
-                <h3>Giá: $1000/1 ngày</h3> 
-                <p>Lưu ý: Giá phòng sẽ thay đổi theo từng ngày từng thời điểm(ngày lễ, tết, cuối tuần)</p>
-              </div>
-              <a href="#" class="btn bg-success col-md-12">Đặt phòng</a>
-              <div class="row text-center mt-2">
-                <div class="col-6">
-                  <p>Diện tích</p>
-                  <p>15-30m2</p>
-                </div>
-                <div class="col-6">
-                  <p>Trạng thái</p>
-                  <p class="text-info">Có thể thuê</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
-      <div class="">
-        <h3>Mô tả</h3>
-        <div>
-          <h5>
-            Chung cư mini mới tại Mễ Trì Hạ, vị trí thuận lợi giao thông:
-          </h5>
-          Tòa nhà nằm trên khu vực Mễ Trì Hạ, gần trục đường Phạm Hùng.<br />
 
-          Cách Siêu thị BigC hơn 1 km.<br />
-
-          Phù hợp cho sinh viên, người đi làm và hộ gia đình.<br /><br />
-
-          <h5>
-            Cho thuê nhà trọ Mễ Trì Hạ full đồ tiện nghi, trang bị đồ mới,
-            không gian rộng thoáng:
-          </h5>
-
-          Đảm bảo full đồ: điều hòa, nóng lạnh, giường, tủ, bàn ghế, gương,
-          bộ tranh, thảm, kệ...<br />
-          Decor trẻ trung, hiện đại với tranh tường và cây xanh.<br />
-          Vệ sinh phòng sạch sẽ khi khách nhận phòng, đảm bảo khách có thể
-          đến ở ngay.<br />
-
-          Cửa sổ thông thoáng, đảm bảo ánh sáng tự nhiên.<br />
-
-          Phòng có ban công view đẹp.<br />
-
-          Cam kết không qua trung gian.<br /><br />
-
-          <h5>
-            Khi thuê phòng trọ Mễ Trì Hạ bạn nhận được rất nhiều ưu đãi:
-          </h5>
-
-          An ninh đảm bảo với khóa vân tay, camera an ninh an toàn tuyệt
-          đối, chỗ gửi xe rộng rãi, free.<br />
-
-          Thang máy mới, nhanh.<br />
-
-          Có nhân viên kinh nghiệm lâu năm vệ sinh tòa nhà mỗi tuần .<br />
-
-          Dịch vụ bảo trì bảo dưỡng đồ đạc định kỳ hoàn toàn miễn phí.<br />
-
-          Tặng ngay một bộ chăn, ga, gối, đệm mới tinh khi thuê nhà trong
-          tháng này.<br />
-
-          Ưu đãi đặc biệt với khách hàng kí hợp đồng 12 tháng.<br />
-
-          Đặt lịch ngay để được nhân viên hỗ trợ nhanh nhất!<br />
-        </div>
-      </div>
- 
-        -->
-      
     </div>
     <!--End trang chi tiết-->
 
@@ -257,7 +144,7 @@
             <tbody>
             <?php foreach ($comments as $comment):?>
               <tr>
-                <!-- <th><?= $comment['id'] ?></th> -->
+           
                 <th><?= $comment['full_name']?></th>
                 <th style="max-width: 300px;
     word-wrap: break-word;
@@ -289,36 +176,28 @@
           <h3>Sản phẩm liên quan</h3>
       
         <div class="row">
-          <div class="col-md-4">
+         
+          
+              <div class="col-12">
+             
             <div class="card text-left">
-              <img class="card-img-top" src="image/banner1.png" alt="">
+             
               <div class="card-body text col-12">
-                <a href=""> <h2 class="text">Poly's Hotel - Phòng đơn </h2></a>
-                <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a> 
-                <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i class="fa-solid fa-cart-plus"></i></span></a> 
+              <?php
+            foreach($pro_cat as $item) :
+             
+             ?>
+                <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>"> <h2 class="text">🏡<?= $item['name'] ?></h2></a>
+                
+                <?php endforeach ?>
              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-left">
-              <img class="card-img-top" src="image/banner1.png" alt="">
-              <div class="card-body text col-12">
-                <a href=""> <h2 class="text">Poly's Hotel - Phòng đơn </h2></a>
-                <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a> 
-                <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i class="fa-solid fa-cart-plus"></i></span></a> 
-             </div>
+           
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card text-left">
-              <img class="card-img-top" src="image/banner1.png" alt="">
-              <div class="card-body text col-12">
-                <a href=""> <h2 class="text">Poly's Hotel - Phòng đơn </h2></a>
-                <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a> 
-                <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i class="fa-solid fa-cart-plus"></i></span></a> 
-             </div>
-            </div>
-          </div>
+
+
+           
+
           
         </div>
       </div>

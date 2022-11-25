@@ -303,31 +303,23 @@
       
         <div class="slide-container swiper mt-4">
             <div class="row slide-content3">
-                <!-- <?php for ($i=0; $i < count($productions) / 12; $i++) : ?> -->
                 <div class="card-wrapper swiper-wrapper col-12">       
                         <?php foreach($productions as $item) : ?>
-                            <!-- <?php if($key > 11) {
-                                break;
-                            } ?> -->
-
                             <div class="card swiper-slide ">
                                 <div class="card-image">
                                     <img src="<?=$item['image'] ?>" alt="" class="img-fluid" width="100%">
                                 </div>
-                                
                                 <div class="card-name text col-12">
                                     <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>">
                                         <h2 class="text"><?= $item['name']?> </h2>
                                     </a>
                                     <a href="" class="text-danger" style="float:left ; font-size:20px ;"> <?= $item['price']?></a>
                                     <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                    class="fa-solid fa-cart-plus"></i></span></a>
-                                    
+                                    class="fa-solid fa-cart-plus"></i></span></a>         
                                 </div>
                         </div>
                         <?php endforeach ?>
                     </div>
-                    <!-- <?php endfor ?> -->
             </div>
             <div class="swiper-button-next swiper-navBtn"></div>
             <div class="swiper-button-prev swiper-navBtn"></div> <br>
