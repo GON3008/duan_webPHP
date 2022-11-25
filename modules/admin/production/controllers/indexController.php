@@ -84,11 +84,6 @@ function updateAction()
 function updatePostAction() {
     request_auth(true);
     $id = $_POST['id'];
-    // $production = get_one_production($id);
-    // if (!$production) {
-    //     header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
-    //     die();
-    // }
     $categories=$_POST['category_id'];
     $name=$_POST['name'];
     $count=$_POST['count'];

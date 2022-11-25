@@ -38,7 +38,7 @@
                                     <?php
                                     foreach ($categories as $category) {
                                         //extract($danhmuc);
-                                        if ($categories == $category['id']) echo '<option value="' . $category['id'] . '" selected > ' . $category['name'] . ' </optinon>';
+                                        if ($categories == $category['id']) echo '<option value="' . $category['id'] . '" selected > ' . $category['name'] . ' </option>';
                                         else echo '<option value="' . $category['id'] . '"  > ' . $category['name'] . ' </optinon>';
                                     } ?>
                                  
