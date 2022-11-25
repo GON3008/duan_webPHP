@@ -13,5 +13,12 @@ function construct() {
 // }
 function indexAction() {
     $data['productions'] = get_list_productions();
+    $data['services'] = get_list_services();
+
     load_view('index', $data);
 }
+// function loadAction() {
+//     // request_auth(true);
+//     $data['services'] = get_list_services();
+//     load_view('index', $data);
+// }

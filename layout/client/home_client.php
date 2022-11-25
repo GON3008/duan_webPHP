@@ -351,31 +351,17 @@
 
         <div class="row text-center">
             <!-- <p>Ăn uống, giặt ủi, thuê xe, spa, thu đổi ngoại tệ, dọn phòng</p> -->
+            <?php foreach($services as $item) : 
+                // var_dump($item);
+                // die;
+                ?>
+                
             <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/hamburger.webp" width="100" height="108" alt=""></a> <br>
-                <a href="">Ăn uống</a>
+                <a href=""><img src="<?=$item['image'] ?>" width="100" height="108" alt=""></a> <br>
+                <a href=""><?= $item['name']?></a>
             </div>
-            <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/giat.png" width="100" alt=""></a> <br>
-                <a href="">Giặt ủi</a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/massage.png" width="100" height="108" alt=""></a> <br>
-                <a href="">Massage</a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/clean.png" width="100" height="108" alt=""></a> <br>
-                <a href="">Dọn dẹp</a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/gym.png" width="100" height="110" alt=""></a> <br>
-                <a href="">Gym</a>
-            </div>
-            <div class="col-md-2 col-sm-4 col-4">
-                <a href=""><img src="public/image/bar.png" width="100" height="110"  alt=""></a> <br>
-                <a href="">Quầy bar</a>
-            </div>
-
+            
+            <?php endforeach ?>
         </div>
 
     </div>

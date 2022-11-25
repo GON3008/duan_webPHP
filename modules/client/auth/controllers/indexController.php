@@ -75,7 +75,7 @@ function sign_upAction() {
 }
 function saveSignUpPostAction(){
     
-    request_auth(true);
+    // request_auth(true);
     $full_name=$_POST['full_name'];
     $email=$_POST['email'];
     $password=$_POST['password'];
