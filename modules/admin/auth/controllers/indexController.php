@@ -4,7 +4,6 @@ function construct() {
     // request_auth(true);
     load_model('index');
 }
-
 function indexAction() {
     //request_auth(true);
     $notifications = get_notification();
@@ -12,7 +11,6 @@ function indexAction() {
         "notifications" => $notifications
     ]);
 }
-
 function indexPostAction() {
         //request_auth(true);
     // validation
@@ -33,7 +31,6 @@ function indexPostAction() {
     }
 }
 function logoutAction(){
-    
     remove_auth();
     header('Location: /du_an_1_poly_hotel/?role=admin&mod=auth');
 }
