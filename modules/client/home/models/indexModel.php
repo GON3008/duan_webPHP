@@ -18,11 +18,9 @@ function get_list_services() {
      s INNER JOIN `users` u ON s.created_id = u.id");
     return $result;
 }
-<<<<<<< HEAD
+
 function get_list_categories() {
     $result = db_fetch_array("SELECT * FROM `categories`");
     return $result;
 }
-=======
 
->>>>>>> cb84fd13185f9e4d550588e7b74ef0b9e23a5f9b
