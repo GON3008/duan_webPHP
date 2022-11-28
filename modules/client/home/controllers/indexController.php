@@ -13,8 +13,12 @@ function construct() {
 // }
 function indexAction() {
     $data['productions'] = get_list_productions();
+    $data['production']= lodall_sanpham_top10();
     $data['services'] = get_list_services();
+<<<<<<< HEAD
     $data['categories'] = get_list_categories();
+=======
+>>>>>>> cb84fd13185f9e4d550588e7b74ef0b9e23a5f9b
     load_view('index', $data);
 }
 // function loadAction() {
