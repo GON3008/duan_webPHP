@@ -43,7 +43,8 @@ function saveCreatePostAction() {
     $name=$_POST['name'];
     $count=$_POST['count'];
     $price=$_POST['price'];   
-    $description=$_POST['description'];   
+    $description=$_POST['description'];  
+     
     $image=$_FILES['image']['name'];
     $target_dir = "./upload/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);

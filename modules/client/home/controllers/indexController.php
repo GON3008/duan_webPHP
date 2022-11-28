@@ -13,5 +13,6 @@ function construct() {
 // }
 function indexAction() {
     $data['productions'] = get_list_productions();
+    $data['production']= lodall_sanpham_top10();
     load_view('index', $data);
 }

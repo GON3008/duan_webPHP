@@ -152,21 +152,23 @@
         <div class="slide-container swiper mt-4">
             <div class="row slide-content2">
                 <div class="card-wrapper swiper-wrapper col-12">
+                    <?php foreach($production as $item) :?>
                     <div class="card swiper-slide ">
                         <div class="card-image">
-                            <img src="public/image/sp1.jpg" alt="" width="100%" class="img-fluid">
+                            <img src="<?=$item['image']?>" alt="" width="100%" class="img-fluid">
                         </div>
 
                         <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
+                            <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>">
+                                <h2 class="text"><?= $item['name']?> </h2>
                             </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100 / 1 ngày</a>
+                            <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>" class="text-danger" style="float:left ; font-size:20px ;"><?=$item['price']?></a>
                             <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
                                         class="fa-solid fa-cart-plus"></i></span></a>
                         </div>
                     </div>
-                    <div class="card swiper-slide  ">
+                    <?php  endforeach?>
+                    <!-- <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp2.jpg" alt="" width="100%" class="img-fluid">
                         </div>
@@ -180,9 +182,9 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="card swiper-slide  ">
+                    <!-- <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp3.jpg" alt="" width="100%" class="img-fluid">
                         </div>
@@ -196,8 +198,8 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
-                    <div class="card swiper-slide  ">
+                    </div> -->
+                    <!-- <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp4.jpg" alt="" width="100%" class="img-fluid">
                         </div>
@@ -211,9 +213,9 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="card swiper-slide  ">
+                    <!-- <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp5.jpg" alt="" width="100%" class="img-fluid">
                         </div>
@@ -227,9 +229,9 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="card swiper-slide  ">
+                    <!-- <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp6.jpg" alt="" width="100%" class="img-fluid">
                         </div>
@@ -243,8 +245,8 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
-
+                    </div> -->
+<!-- 
                     <div class="card swiper-slide">
                         <div class="card-image">
                             <img src="public/image/sp7.jpg" alt="" width="100%" class="img-fluid">
@@ -259,8 +261,8 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
-
+                    </div> -->
+<!-- 
                     <div class="card swiper-slide  ">
                         <div class="card-image">
                             <img src="public/image/sp8.jpg" alt="" width="100%" class="img-fluid">
@@ -275,7 +277,7 @@
                                         class="fa-solid fa-cart-plus"></i></span></a>
 
                         </div>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -283,6 +285,8 @@
             <div class="swiper-button-next swiper-navBtn"></div>
             <div class="swiper-button-prev swiper-navBtn"></div> <br>
             <div class="swiper-pagination2 mx-auto"></div>
+
+            
         </div>
     </div>
     <!--End Top Favorite Rooms-->
@@ -297,10 +301,7 @@
                     tâm</p>
 
             </div>
-        </div>
-
-
-      
+        </div>  
         <div class="slide-container swiper mt-4">
             <div class="row slide-content3">
                 <div class="card-wrapper swiper-wrapper col-12">       

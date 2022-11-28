@@ -61,6 +61,8 @@
                         <div class="form-group">
                             <!-- <label for="my-login">Email</label> -->
                             <input id="my-login" class="form-control border-bottom bg-success text-white"   type="submit" name="" value="Đổi mật khẩu">
+                            <!-- <?php  header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation")?> -->
+                         
                         </div>
                         
                     </form>
