@@ -52,20 +52,25 @@ function indexPostAction() {
 //     }
 // }
 function infomationAction() {
-    request_auth(true);
-    load_view('infomation');
-    header('Location:/du_an_1_poly_hotel/?role=client');
+    //request_auth(true);
+    if(is_auth()){
+        load_view('infomation');
+        header('Location:/du_an_1_poly_hotel/?role=client');
+    }
+ 
    
 }
 
 function logoutAction(){
-    request_auth(true);
+    //request_auth(true);
     // session_unset();
     
     // header('Location: /du_an_1_poly_hotel/?role=client');
     
+   if(is_auth()){
     remove_auth();
     header('Location:/du_an_1_poly_hotel /?role=client');
+   }
 }
 function sign_upAction() {
     $notifications = get_notification();
@@ -75,7 +80,7 @@ function sign_upAction() {
 }
 function saveSignUpPostAction(){
     
-    request_auth(true);
+    // request_auth(true);
     $full_name=$_POST['full_name'];
     $email=$_POST['email'];
     $password=$_POST['password'];

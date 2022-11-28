@@ -41,12 +41,12 @@
                     </div>
                 
                     <div class="form-group">
-                        <label>Giá phòng</label>
+                        <label>Giá dịch vụ</label>
                         <input type="text" name="price" class="form-control" placeholder="Nhập vào giá phòng" value="<?php echo $service['price'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group mb-1">
-                        <label for="descriptionCategoryInput">Mô tả phòng</label>
+                        <label for="descriptionCategoryInput">Mô tả dịch vụ</label>
                         <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $service['description'] ?></textarea>
                     </div>
                 </div>
