@@ -111,7 +111,7 @@
             <!-- sp -->
             <div class="card-wrapper swiper-wrapper col-12">
 
-                <?php foreach ($productions as $item) : ?>
+             
 
               <?php foreach($production4 as $item) : ?>
                 <div class="card swiper-slide ">
@@ -238,116 +238,6 @@
                         </div>
                     </div>
                 <?php endforeach ?>
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp2.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp3.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp4.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp5.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp6.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- 
-                    <div class="card swiper-slide">
-                        <div class="card-image">
-                            <img src="public/image/sp7.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- 
-                    <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp8.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
             </div>
 
         </div>
@@ -413,10 +303,7 @@
 
     <div class="row text-center">
         <!-- <p>Ăn uống, giặt ủi, thuê xe, spa, thu đổi ngoại tệ, dọn phòng</p> -->
-        <?php foreach ($services as $item) :
-            // var_dump($item);
-            // die;
-        ?>
+        <?php foreach ($services as $item) :?>
 
             <div class="col-md-2 col-sm-4 col-4">
                 <a href=""><img src="<?= $item['image'] ?>" width="100" height="108" alt=""></a> <br>
