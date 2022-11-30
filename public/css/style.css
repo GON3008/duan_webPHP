@@ -18,10 +18,12 @@ body {
     color: #fdb913 !important;
 }
 
-.dropdown-menu {
+.bg-color1 {
+    background-color: white !important;
+}
+.bg-color{
     background-color: #2b296d !important;
 }
-
 .light {
     background-color: #fdb913 !important;
     height: 5px;

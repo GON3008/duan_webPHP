@@ -48,7 +48,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chính sách
                         </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu bg-color" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" style="color:gray;" href="#">Chính sách bảo mật</a>
                             <a class="dropdown-item" style="color:gray;" href="#">Chính sách đổi trả</a>
                             <a class="dropdown-item" style="color:gray;" href="#">Chính sách dịch vụ</a>

@@ -57,6 +57,9 @@ function addCommentsPostAction(){
       
         add_comments($data);
         header("location:/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=${product_id}");
+     }else{
+        header("location:/du_an_1_poly_hotel/?role=client&mod=auth");
+
      }
    
 
