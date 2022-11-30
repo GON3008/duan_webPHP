@@ -66,11 +66,17 @@
                 </div>
 
                 <div class="form-group col-md-6 col-sm-12">
-                    <select id="my-select" class="form-control" name="">
+                    <select id="my-select" class="form-control" name="category_id">
                         <option value="">Lọc theo loại phòng</option>
-                        <option>Phòng đơn</option>
+                        <?php 
+                            foreach($categories as $category){
+                                echo ' <a href=""><option value='.$category['id'].'>'.$category['name'].'</option></a>';
+                               
+                            }
+                        ?>
+                        <!-- <option>Phòng đơn</option>
                         <option>Phòng đôi</option>
-                        <option>Phòng tình nhân</option>
+                        <option>Phòng tình nhân</option> -->
                     </select>
                 </div>
             </div>
