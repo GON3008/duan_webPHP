@@ -4,7 +4,7 @@
           <h3>Danh mục sản phẩm</h3>
           <div class="row">
             <?php foreach ($categories as $category):?>
-              <a href="/du_an_1_poly_hotel/?role=client&mod=category" class="btn btn-primary rounded-pill fs-6 fw-semibold text-white px-3 me-3"><?= $category['name'] ?></a>
+              <a href="/du_an_1_poly_hotel/?role=client&mod=category&action=index&id=<?= $category['id'] ?>" style="margin:10px 0px 0px 10px;" class="btn btn-primary rounded-pill fs-6 fw-semibold text-white px-3 me-3"><?= $category['name'] ?></a>
               <?php endforeach ?>
           </div>
       </div>
@@ -27,7 +27,7 @@
                                 <h2 class="text"><?= $item['name'] ?> </h2>
                             </a>
                             <a href="" class="text-danger" style="float:left ; font-size:20px ;"> <?= $item['price'] ?></a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i class="fa-solid fa-cart-plus"></i></span></a>
+                            <a href="" class="text" style="float:right ; "><span class="rounded-circle"><i class="fa-solid fa-heart" style="margin:0px 0px 0px 3.5px;"></i></span></a>
 
                         </div>
                     </div>
