@@ -21,7 +21,9 @@ function get_list_pro_by_catid($cat)
 
 }
 
-
+function get_list_view($data,$id){
+    db_update("productions",$data , "id=$id" );
+}
 
 
 

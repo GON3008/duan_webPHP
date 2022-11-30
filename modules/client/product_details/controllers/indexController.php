@@ -7,6 +7,7 @@ function construct() {
 
 function indexAction() {
     $id = $_GET['id'];
+   
     // $data['productions'] = get_one_production($id);
     $production = get_one_production($id);
     $data['productions' ] = $production;
@@ -15,6 +16,9 @@ function indexAction() {
     $categories=get_list_categories();
     $data['categories']= $categories;
     $data['comments'] =get_list_comments($id);
+    get_list_view(["views"=>$production['views']+1] ,$id);
+    
+
     // $data1['category'] = $categories;
 
     if ($production) {
