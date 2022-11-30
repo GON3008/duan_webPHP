@@ -9,9 +9,9 @@ function indexAction() {
     $id = $_GET['id'];
     // $data['productions'] = get_one_production($id);
     $production = get_one_production($id);
+    $data['productions' ] = $production;
     $cat=$production['category_id'];
     $data['pro_cat']=get_list_pro_by_catid($cat);
-    $data['productions' ] = $production;
     $categories=get_list_categories();
     $data['categories']= $categories;
     $data['comments'] =get_list_comments($id);

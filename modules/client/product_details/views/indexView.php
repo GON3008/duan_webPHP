@@ -34,37 +34,7 @@
     <hr class="display-4" />
     <!--Trang chi tiết-->
     <div class="container mt-5">
-      <!-- <div> -->
-      <!-- <?php
-            foreach($categories as $item) :
-              // extract($item);
-              // var_dump($item);
-              // die;
-             ?>
-        
-      <input type="hidden" value="<?=$item['id']?>" name="id">
-        mã loại: <?=$item['name']?>
-
-        <?php endforeach ?>
-      </div> -->
-      <!-- <div>
-      <?php foreach ($categories as $category) {
-         if ($productions['id'] == $category["id"]) {
-        ?>
-                               
-                mã loại:   <?=$category['name']?>
-                               
-                        <?php    }
-                      } ?>
-      </div> -->
-  
     <input type="hidden" value="<?=$productions['id']?>" name="id">
-    <!-- <div>
-      mã loại: <?=$productions['category_id']?>
-    </div> -->
-   
-                        
-    
       <div class="row">
         <div class="col-md-8">
           <div>
@@ -74,10 +44,7 @@
           <div>
           <img src="<?=$productions['image'] ?>" alt="" width="100%" class="img-fluid">
           </div>
-          
-          
         </div>
-
         <div class="col-md-4 mt-3">
           <div class="card" style="width: 100%;">
          

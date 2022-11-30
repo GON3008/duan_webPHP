@@ -5,6 +5,12 @@ function get_list_productions() {
     $result=db_fetch_array("select *  from productions  where 1 order by id ");
     return $result;
 }
+function lodall_sanpham(){
+    // $sql="select * from productions where 1 order by views desc limit 0,10";
+    $result=db_fetch_array("select * from productions where 1 order by id desc limit 0,4");
+    // $result=$production;
+    return   $result;
+}
 
 function lodall_sanpham_top10(){
     // $sql="select * from productions where 1 order by views desc limit 0,10";

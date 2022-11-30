@@ -20,6 +20,11 @@ function get_list_pro_by_catid($cat)
     return $result;
 
 }
+
+
+
+
+
 function get_list_comments($id) {
     $result = db_fetch_array("SELECT c.*,u.full_name as `full_name`  FROM `comments` c  JOIN `users` u ON c.created_id = u.id where c.product_id=${id} order by c.id desc");
     return $result;

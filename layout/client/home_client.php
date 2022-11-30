@@ -97,7 +97,7 @@
             <div class="row slide-content">
             <!-- sp -->
             <div class="card-wrapper swiper-wrapper col-12">
-              <?php foreach($productions as $item) : ?>
+              <?php foreach($production4 as $item) : ?>
                 <div class="card swiper-slide ">
                     <div class="card-image">
                         <img src="<?=$item['image'] ?>" alt="" width="100%" class="img-fluid">
