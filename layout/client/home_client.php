@@ -110,9 +110,8 @@
         <div class="row slide-content">
             <!-- sp -->
             <div class="card-wrapper swiper-wrapper col-12">
-<<<<<<< HEAD
+
                 <?php foreach ($productions as $item) : ?>
-=======
               <?php foreach($production4 as $item) : ?>
                 <div class="card swiper-slide ">
                     <div class="card-image">
@@ -169,7 +168,7 @@
             <div class="row slide-content2">
                 <div class="card-wrapper swiper-wrapper col-12">
                     <?php foreach($production as $item) :?>
->>>>>>> 65199937c1244b8123a79fdb25050e12bb4f8630
+
                     <div class="card swiper-slide ">
                         <div class="card-image">
                             <img src="<?= $item['image'] ?>" alt="" width="100%" class="img-fluid">
@@ -238,116 +237,7 @@
                         </div>
                     </div>
                 <?php endforeach ?>
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp2.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp3.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp4.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp5.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-
-                <!-- <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp6.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- 
-                    <div class="card swiper-slide">
-                        <div class="card-image">
-                            <img src="public/image/sp7.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
-                <!-- 
-                    <div class="card swiper-slide  ">
-                        <div class="card-image">
-                            <img src="public/image/sp8.jpg" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="">
-                                <h2 class="text">Poly's Hotel - Phòng đơn </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $100</a>
-                            <a href="" class="text" style="float:right ;"><span class="rounded-circle"><i
-                                        class="fa-solid fa-cart-plus"></i></span></a>
-
-                        </div>
-                    </div> -->
+                
             </div>
 
         </div>
