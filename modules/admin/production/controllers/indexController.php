@@ -44,7 +44,7 @@ function saveCreatePostAction() {
     $count=$_POST['count'];
     $price=$_POST['price'];   
     $description=$_POST['description'];  
-     
+    $status=$_POST['status'];
     $image=$_FILES['image']['name'];
     $target_dir = "./upload/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
@@ -52,7 +52,7 @@ function saveCreatePostAction() {
     // $age=$_GET['age'];
     // $earn=$_GET['earn'];
     // $data=["category_id"=>$categories,"name"=>$name,"count"=>$count,"price"=>$price,"description"=>$description,"image"=>$target_file];
-    create_production($name, $description,$target_file,$count,$price,$categories);
+    create_production($name, $description,$target_file,$count,$price,$categories,$status);
     push_notification('success', ['Tạo mới sản phẩm thành công']);
     header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
 }
@@ -88,6 +88,7 @@ function updatePostAction() {
     $categories=$_POST['category_id'];
     $name=$_POST['name'];
     $count=$_POST['count'];
+    $status=$_POST['status'];
     $price=$_POST['price'];   
     $description=$_POST['description'];   
     $image=$_FILES['image']['name'];
@@ -95,12 +96,12 @@ function updatePostAction() {
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
     if($_FILES["image"]["size"]!=0){
-        $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count, "price"=>$price, "image"=>$target_file, "category_id"=>$categories];
+        $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count,"status"=>$status, "price"=>$price, "image"=>$target_file, "category_id"=>$categories];
         // update_production($id, $name, $description,$target_file,$count,$price,$categories);
 
     }else{
     //update_production($id, $name, $description,$target_file,$count,$price,$categories);
-    $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count, "price"=>$price, "category_id"=>$categories];
+    $data=["id"=>$id, "description"=>$description, "name"=>$name,"count"=>$count, "price"=>$price, "category_id"=>$categories,"status"=>$status];
 
     }
     update_production($data,$id);

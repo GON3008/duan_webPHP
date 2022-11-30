@@ -71,6 +71,7 @@
                             <th title="Field #2">Ảnh phòng</th>
                             <th title="Field #2">Số lượng</th>
                             <th title="Field #2">Giá phòng</th>
+                            <th title="Field #2">Trạng thái</th>
                             <th title="Field #2">Ngày tạo</th>                           
                             <th title="Field #4">Người tạo</th>
                             <th title="Field #2">Hành động</th>
@@ -85,8 +86,9 @@
                                 <td><?php echo ($production['name']) ?></td>
                                 <td><img src="<?php echo ($production['image']) ?>" alt="" width="50"></td>
                                 <td><?php echo ($production['count']) ?></td>
+                              
                                 <td><?php echo ($production['price']) ?></td>
-                                
+                                <td><?php echo ($production['status']== 1 ? "Có thể thuê" : "Không thể thuê") ?></td>
                                 <td><?php echo ($production['created_at']) ?></td>
                                
                                 <td><?php echo ($production['full_name']) ?></td>

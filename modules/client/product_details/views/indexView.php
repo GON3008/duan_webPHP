@@ -72,7 +72,7 @@
                 </div>
                 <div class="col-6">
                   <p>Trạng thái</p>
-                  <p class="text-info">Có thể thuê</p>
+                  <p class="text-info"><?= $productions['status']==1 ? "Có thể thuê" : "Không thể thuê" ?></p>
                 </div>
               </div>
             </div>
