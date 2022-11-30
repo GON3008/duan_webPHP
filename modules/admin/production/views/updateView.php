@@ -30,7 +30,7 @@
                 <div class="card-body">
                     <div class="form-group">
                         <label>Danh mục sản phẩm</label>
-            <input type="hidden" value="<?=$production['id']?>" name="id">
+                <input type="hidden" value="<?=$production['id']?>" name="id">
                         
                         <select class="form-control select2" name="category_id">
                             <?php foreach ($categories as $category) {
@@ -40,18 +40,6 @@
                                     echo '<option  value="' . $category['id'] . '" > ' . $category['name'] . '</option>';
                                 }
                             } ?>
-
-                            <!-- <?php foreach ($categories as $category) : ?>
-                                <option value="<?= $category['id'] ?>" <?= $category['id'] == $production['category_id'] ? "selected=selected" : "" ?>>
-                                    <?= $category['name'] ?>
-                                </option>
-                            <?php endforeach ?> -->
-
-                            <!-- <?php foreach ($categories as $category) :?>
-                                <option value="<?= $category['id'] ?>" <?= $category['id'] == $production['category_id'] ? "selected=selected" : "" ?>>
-                                <?= $category['name'] ?>
-                            </option>
-                                <?php endforeach ?> -->
                         </select>
                     </div>
                     <div class="form-group">
@@ -73,6 +61,11 @@
                         <label>Giá phòng</label>
                         <input type="text" name="price" class="form-control" placeholder="Nhập vào giá phòng" value="<?php echo $production['price'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="radio" value="1" name="status" <?= $production['status'] == 1 ? "checked" : "" ?>>Có thể thuê
+                        <input type="radio" value="2" name="status" <?= $production['status'] == 2 ? "checked" : "" ?>>Không thể thuê
                     </div>
                     <div class="form-group mb-1">
                         <label for="descriptionCategoryInput">Mô tả phòng</label>
