@@ -6,7 +6,7 @@
     <div class="formdathang">
         <div>
             <td>Người đặt hàng</td> <br>
-            <td><input type="text" name="name"></td>
+            <td><input type="text" name="full_name"></td>
         </div>
         <div>
             <td>Địa chỉ</td><br>
@@ -18,7 +18,7 @@
         </div>
         <div>
             <td>Số điện thoại</td><br>
-            <td><input type="text" name="tel"></td>
+            <td><input type="text" name="numberphone"></td>
         </div>
 
     </div>
@@ -55,11 +55,11 @@
 <div class="thongtinsanpham">
         <table>
             <tr>
-
-                <th>Tên sản phẩm</th>
+                <th>Tên phòng</th>
                 <th>Hình</th>
                 <th>Đơn giá</th>
-                <th>Số lượng</th>
+                <th>Thời gian nhận phòng</th>
+                <th>Thời gian trả phòng</th>
                 <th>Thành tiền</th>
                 <th>Thao tác</th>
             </tr>

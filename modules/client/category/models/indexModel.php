@@ -18,11 +18,9 @@ function get_one_category($id) {
 //     $result=db_fetch_array("select * from  productions where category_id=".$category_id." AND id<>" .$id);
 //     return $result;
 // }
-function get_list_pro_by_catid($cat)
-{
+function get_list_pro_by_catid($cat){
     $result=  db_fetch_array("select * from  productions where category_id=$cat");
     return $result;
-
 }
 function get_list_productions() {
     $result = db_fetch_array("SELECT p.id,p.name,p.image,p.count,p.price,p.description,p.created_at, p.created_id ,u.full_name as `full_name` FROM `productions` p JOIN `users` u ON p.created_id = u.id ");

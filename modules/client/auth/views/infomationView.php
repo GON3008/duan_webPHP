@@ -5,7 +5,7 @@
 <div class="user">
     <div class="user1">
         <div class="item1">
-            <img src="public/image/ảnh đại diện.jpg" alt="">
+            <img src="public/image/addfb.png" alt="" style="width:200px; margin-left:10px;">
             <p style="margin-left:5px;"><?= $_SESSION["auth"]['full_name']  ?></p>
         </div>
         <div class="item2">

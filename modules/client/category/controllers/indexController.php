@@ -9,7 +9,6 @@ function indexAction() {
     $id = $_GET['id'];
     $categories=get_list_categories();
     $data['categories']= $categories;
-    
     $data['productions'] = get_one_production($id);
     $categories =  get_one_category($id);
     $cat=$categories['id'];

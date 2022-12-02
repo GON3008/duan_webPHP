@@ -51,7 +51,7 @@
             <div class="card-body">
              
                 <div class="form-group">
-                  <label for="my-input">Ngày đặt phòng</label>
+                  <label for="my-input">Ngày nhận phòng</label>
                   <input id="my-input" class="form-control" type="date" name="" required>
                 </div>
 
@@ -61,7 +61,7 @@
                 </div>
 
               <div class="mt-3 text-danger">
-                <h3>Giá:<?= $productions['price']?></h3> 
+                <h3>Giá:$<?= $productions['price']?></h3> 
                 <p>Lưu ý: Giá phòng sẽ thay đổi theo từng ngày từng thời điểm(ngày lễ, tết, cuối tuần)</p>
               </div>
               <a href="/du_an_1_poly_hotel/?role=client&mod=bill" class="btn bg-success col-md-12">Đặt phòng</a>
