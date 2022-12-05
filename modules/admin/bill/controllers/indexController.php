@@ -16,7 +16,7 @@ function deleteAction(){
     request_auth(true);
     $id=$_GET['id'];
     delete_bill_detail($id);
-    push_notification('success', ['Xoá danh mục sản phẩm thành công']);
+    push_notification('success', ['Xoá hóa đơn thành công']);
     header('location:/du_an_1_poly_hotel/?role=admin&mod=bill&action=index');
 
 
