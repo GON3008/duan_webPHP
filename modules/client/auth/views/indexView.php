@@ -34,7 +34,8 @@
                             Đăng nhập bằng số điện thoại
                         </div>
                         <div class="float-right mb-3">
-                            Quên mật khẩu?
+                        <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword">Quên mật khẩu?</a>
+
                         </div>
                         <br>
                         <?php foreach ($notifications as $notification) : ?>

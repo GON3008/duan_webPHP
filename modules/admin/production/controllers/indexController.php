@@ -14,7 +14,7 @@ function createAction() {
     request_auth(true);
     $data['categories'] = get_list_categories();
     load_view('create', $data);
-    load_view('create');
+    //load_view('create');
     
 }
 // function createAction() {

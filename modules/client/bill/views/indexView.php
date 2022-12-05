@@ -1,6 +1,6 @@
 <?php include "./layout/client/header_client.php" ?>
 
-<form action="" method="post">
+<form action="/du_an_1_poly_hotel/?role=client&mod=bill&action=insertBill" method="post">
     <h3>Thông tin đặt hàng</h3>
 
     <div class="formdathang">
@@ -24,7 +24,7 @@
     </div>
     <br>
 
-   
+
     <style>
         .formdathang {
             margin-left: 200px;
@@ -52,26 +52,48 @@
     </style>
 
 
-<div class="thongtinsanpham">
+    <div class="thongtinsanpham">
         <table>
-            <tr>
-                <th>Tên phòng</th>
-                <th>Hình</th>
-                <th>Đơn giá</th>
-                <th>Thời gian nhận phòng</th>
-                <th>Thời gian trả phòng</th>
-                <th>Thành tiền</th>
-                <th>Thao tác</th>
-            </tr>
-            <?php
-            
-              
-            ?>
+            <thead>
+                <tr>
+                    <th>Tên phòng</th>
+                    <th>Hình</th>
+                    <th>Thời gian nhận phòng</th>
+                    <th>Thời gian trả phòng</th>
+                    <th>Thành tiền</th>
+                    <th><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete" class="">Xoá tất cả</a></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <?php
+                if (isset($_SESSION['cart'])) {
+                    foreach ($_SESSION['cart'] as $key => $item) {
+                        echo '
+                        <tr>
+                            <td>'.$item['name'].'</td>
+                            <td><img src="'.$item['image'].'" width="50"></td>
+                            <td>'.$item['check_in_date'].'</td>
+                            <td>'.$item['check_out_date'].'</td>
+                            <td>'.$item['price'].'</td>
+
+                            <td><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete&id='.$key.'">Xóa  </a>  </td>
+                        </tr>
+                        
+                        
+                        ';
+                    }
+                }
+                ?>
+
+            </tbody>
+
         </table>
     </div>
 
     <br>
 
+   
     <div class="dongydathang">
         <input type="submit" value="Đồng ý đặt hàng" name="dongydathang">
         <input type="reset" value="Nhập lại" name="nhaplai">

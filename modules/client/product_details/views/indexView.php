@@ -50,21 +50,26 @@
          
             <div class="card-body">
              
-                <div class="form-group">
+            <form action="/du_an_1_poly_hotel/?role=client&mod=bill&action=index" method="post">
+              <input type="hidden" name="id" value="<?= $productions['id'] ?>">
+            <div class="form-group">
                   <label for="my-input">Ngày nhận phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="" required>
+                  <input id="my-input" class="form-control" type="date" name="check_in_date" required>
                 </div>
 
                 <div class="form-group">
                   <label for="my-input">Ngày trả phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="" required>
+                  <input id="my-input" class="form-control" type="date" name="check_out_date" required>
                 </div>
+                <button type="submit" class="btn bg-success col-md-12">Đặt phòng</button>
+            </form>
 
               <div class="mt-3 text-danger">
                 <h3>Giá:$<?= $productions['price']?></h3> 
                 <p>Lưu ý: Giá phòng sẽ thay đổi theo từng ngày từng thời điểm(ngày lễ, tết, cuối tuần)</p>
               </div>
-              <a href="/du_an_1_poly_hotel/?role=client&mod=bill" class="btn bg-success col-md-12">Đặt phòng</a>
+            
+              <!-- <a href="/du_an_1_poly_hotel/?role=client&mod=bill" class="btn bg-success col-md-12">Đặt phòng</a> -->
               <div class="row text-center mt-2">
                 <div class="col-6">
                   <p>Diện tích</p>
@@ -124,7 +129,9 @@
           </table>
         </div>
       </div>
-      <form action="/du_an_1_poly_hotel/?role=client&mod=product_details&action=addComments&id=<?= $productions['id'] ?>" method="post">
+
+      <?php if(is_auth()){?>
+        <form action="/du_an_1_poly_hotel/?role=client&mod=product_details&action=addComments&id=<?= $productions['id'] ?>" method="post">
       <div class="row">
           <div class=" col-md-10 mt-1">
             <input id="my-input" class="form-control" type="text" name="description" placeholder="Bình luận">
@@ -134,7 +141,9 @@
           </div>
       </div>
       </form>
-      
+      <?php }else{ ?>
+              <h5 style="margin-bottom:10px;"> Vui lòng đăng nhập để bình luận <a href="/du_an_1_poly_hotel/?role=client&mod=auth">Đăng nhập</a></h5>
+      <?php } ?>
     </div>
     <!--End form bình luận-->
 

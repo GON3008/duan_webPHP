@@ -1,5 +1,9 @@
 
-<?php require "layout/client/header_client.php" ?>
+<?php require "layout/client/header_client.php";
+
+?>
+
+
 <!----------------------------------------------------------------------------------------------------->
         <!--Đăng ký-->
         <div class="container bg-light">
@@ -10,7 +14,7 @@
                 <div class="col-md-6 mt-5">
                     <h2>Quên mật khẩu</h2>
                     <form action="/du_an_1_poly_hotel/?role=client&mod=auth&action=saveForgotPassword" method="POST">
-                        
+                       
                         <div class="form-group">
                             <!-- <label for="my-login">Email</label> -->
                             <input id="my-login" class="form-control border-bottom"  type="email" name="email" placeholder="Email" required>
@@ -25,7 +29,7 @@
                         </div>
                         <div class="form-group">
                             <!-- <label for="my-login">Email</label> -->
-                            <input id="my-login" class="form-control border-bottom bg-success text-white"   type="submit" name="" value="Lấy lại mật khẩu">
+                            <input id="my-login" class="form-control border-bottom bg-success text-white"   type="submit" name="submit" value="Lấy lại mật khẩu">
                            
                        
                         </div>

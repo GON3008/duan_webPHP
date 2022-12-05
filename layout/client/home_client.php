@@ -39,14 +39,15 @@
 
 <!--Form Search, Lọc -->
 <div class="container">
-    <form action="">
+    <form action="/du_an_1_poly_hotel/?role=client&mod=search&action=index" method="POST">
         <div class="row mt-4">
             <div class="form-group col-md-9 col-sm-12 mt-2">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="form-control pl-5" id="exampleInput" placeholder="Tìm kiếm...">
+                <input type="text" class="form-control pl-5" id="exampleInput" placeholder="Tìm kiếm..." name="keyword">
             </div>
             <div class="form-group col-md-3 col-sm-12 mt-2">
-                <input type="submit" class="form-control bg-success" id="exampleInput" placeholder="Tìm kiếm..." value="Tìm kiếm">
+                <!-- <button type="submit" class="form-control bg-success" >Tìm kếm</button> -->
+                <input type="submit" class="form-control bg-success"  value="Tìm kiếm" name="search">
             </div>
         </div>
     </form>
@@ -124,7 +125,7 @@
                             <h2 class="text"><?= $item['name']?> </h2>
                         </a>
                         <a href="" class="text-danger" style="float:left ; font-size:20px ;">$<?= $item['price']?></a>
-                        <a href="" class="text" style="float:right ; "><span class="rounded-circle"><i class="fa-solid fa-heart" style="margin:0px 0px 0px 3.5px;"></i></span></a>
+                        <a href="/du_an_1_poly_hotel/?role=client&mod=cart&id=<?php echo $item['id']?>" class="text" style="float:right ; "><span class="rounded-circle"><i class="fa-solid fa-heart" style="margin:0px 0px 0px 3.5px;"></i></span></a>
                     </div>
                 </div>
                 <?php endforeach ?>

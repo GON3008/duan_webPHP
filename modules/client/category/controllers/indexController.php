@@ -13,7 +13,6 @@ function indexAction() {
     $categories =  get_one_category($id);
     $cat=$categories['id'];
     $data['pro_cat']=get_list_pro_by_catid($cat);
-
     load_view('index', $data);
 }  
 
