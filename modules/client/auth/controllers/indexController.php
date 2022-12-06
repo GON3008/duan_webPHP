@@ -109,8 +109,8 @@ function saveSignUpPostAction()
     //     push_notification('danger', ['Email đã tồn tại trong hệ thống']);
     //     header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
     // } 
-    
-    else  {
+
+    else {
         push_notification('danger', ['Vui lòng nhập lại mật khẩu']);
         header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
 
@@ -173,7 +173,7 @@ function saveChangePasswordPostAction()
         if ($count > 0) {
             $sql_update = mysqli_query($conn, "update users set email='$email' , password='$password_new' where email='$email' and password='$password_old'");
             echo "<script> alert('Đổi mật khẩu thành công!!!') </script>";
-                  header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+            header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
         } else {
             echo "<script> alert('Đổi mật khẩu không thành công!!!') </script>";
             header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
@@ -190,45 +190,75 @@ function forgotPasswordAction()
 {
     //request_auth(true);
 
-   
 
-        $notifications = get_notification();
-        load_view('forgotPassword', [
-            "notifications" => $notifications
-        ]);
-    } 
+
+    $notifications = get_notification();
+    load_view('forgotPassword', [
+        "notifications" => $notifications
+    ]);
+}
 
 function saveForgotPasswordPostAction()
 {
     require_once "mail/index.php";
-   
-        //$id = $_GET['id'];
-        $id=$_SESSION['auth']['id'];
-        global $conn;
-        $addressMail = $_POST['email'];
-        $sql = mysqli_query($conn, "select * from users where email='$addressMail'");
-        //$row=mysqli_fetch_array($sql);
-        if ($_SESSION['auth']['email'] === $addressMail) {
 
+
+    // $id=$_SESSION['auth']['id'];
+    // global $conn;
+    // $addressMail = $_POST['email'];
+    // $sql = mysqli_query($conn, "select * from users where email='$addressMail'");
+    // //$row=mysqli_fetch_array($sql);
+    // if ($_SESSION['auth']['email'] === $addressMail) {
+
+    //     $code = substr(rand(0, 999999), 0, 6);
+    //     $title = "Mật khẩu mới Poly's Hotel";
+    //     $content = "Mật khẩu mới của bạn là: <p style='color:red;'>$code</p> Vui lòng không chia sẽ mã này với ai khác để tránh mất mật khẩu
+    //     <br>
+    //     Cảm ơn quý khách đã sử dụng dịch vụ của Poly's Hote!!! <br>
+    //     Chúc quý khách một ngày tốt lành!!!
+    //     ";
+    //     GuiMail($title, $content, $addressMail);
+    //     //$sql_update=mysqli_query($conn,"update users password='$code'");
+    //     $data=["password"=>$code];
+    //     update_user($data,$id);
+    //     push_notification('success', ['Mật khẩu đã được gửi về mail của bạn']);
+    //     header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+    // } else {
+    //     push_notification('success', ['Email không trùng khớp']);
+    //     header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+    // }
+
+    $addressMail = $_POST['email'];
+    $addressMail = filter_var($addressMail, FILTER_SANITIZE_EMAIL);
+    $addressMail = filter_var($addressMail, FILTER_VALIDATE_EMAIL);
+    global $conn;
+    if (empty($addressMail)) {
+        push_notification('success', ['Vui lòng nhập email!']);
+        header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+    } else {
+        $sql = mysqli_query($conn, "select * from users where email = '$addressMail'");
+        $row = mysqli_fetch_array($sql);
+        $count = mysqli_num_rows($sql);
+        if ($count > 0) {
+            // push_notification('success', ['Mật khẩu của bạn là:' .$row['pw_users']]);
             $code = substr(rand(0, 999999), 0, 6);
             $title = "Mật khẩu mới Poly's Hotel";
             $content = "Mật khẩu mới của bạn là: <p style='color:red;'>$code</p> Vui lòng không chia sẽ mã này với ai khác để tránh mất mật khẩu
-            <br>
-            Cảm ơn quý khách đã sử dụng dịch vụ của Poly's Hote!!! <br>
-            Chúc quý khách một ngày tốt lành!!!
-            ";
+        <br>
+        Cảm ơn quý khách đã sử dụng dịch vụ của Poly's Hote!!! <br>
+        Chúc quý khách một ngày tốt lành!!!
+        ";
+            $sql_update=mysqli_query($conn,"update users set password='$code' where email='$addressMail'");
+            // $data = ["password" => $code];
+            // update_user($data, $id);
             GuiMail($title, $content, $addressMail);
-            //$sql_update=mysqli_query($conn,"update users password='$code'");
-            $data=["password"=>$code];
-            update_user($data,$id);
             push_notification('success', ['Mật khẩu đã được gửi về mail của bạn']);
             header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+            //header('Location: ?role=client&mod=auth&action=forgotPassword');
         } else {
-            push_notification('success', ['Email không trùng khớp']);
+            push_notification('success', ['Email của bạn không tồn tại trong hệ thống !']);
             header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
         }
-    } 
-
-   
-
-
+        
+    }
+}

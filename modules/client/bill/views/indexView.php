@@ -69,13 +69,15 @@
                 <?php
                 if (isset($_SESSION['cart'])) {
                     foreach ($_SESSION['cart'] as $key => $item) {
+                        $price=date("d",strtotime(($item['check_out_date'])) - strtotime($item['check_in_date']))*$item['price'] ;
+
                         echo '
                         <tr>
                             <td>'.$item['name'].'</td>
                             <td><img src="'.$item['image'].'" width="50"></td>
                             <td>'.$item['check_in_date'].'</td>
                             <td>'.$item['check_out_date'].'</td>
-                            <td>'.$item['price'].'</td>
+                            <td>$'.$price.'</td>
 
                             <td><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete&id='.$key.'">Xóa  </a>  </td>
                         </tr>

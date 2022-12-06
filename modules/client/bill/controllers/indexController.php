@@ -126,7 +126,9 @@ function insertBillPostAction()
                   $content = "<p>Xin chào,<b>$full_name</b></p>
                               <p>Cảm ơn <b>$full_name</b> đã sử dụng dịch vụ khách sạn của chúng tôi - khách sạn Poly's Hotel.</p>
                               
-                              <p>Như lời yêu cầu, chúng tôi đã đặt phòng cho <b>$full_name</b> với tên phòng là ".$cart['name']." từ ngày ".$cart['check_in_date']." đến ngày ".$cart['check_out_date'].". </p>
+                              <p>Như lời yêu cầu, chúng tôi đã đặt phòng cho <b>$full_name</b> với tên phòng là ".$cart['name']." từ ngày ".$cart['check_in_date']." đến ngày ".$cart['check_out_date'].".
+                              Tổng tiền là: $$price.
+                              </p>
                               
                               <p>Chúng tôi rất mong đợi chuyếnn thăm của <b>$full_name</b></p>
                               
