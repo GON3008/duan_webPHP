@@ -6,28 +6,18 @@
  <!----------------------------------------------------------------------------------------------------->
     <!--Form Search-->
     <div class="container">
-      <form action="">
+    <form action="/du_an_1_poly_hotel/?role=client&mod=search&action=index" method="POST">
         <div class="row mt-4">
-          <div class="form-group col-md-9 col-sm-12 mt-2">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input
-              type="text"
-              class="form-control pl-5"
-              id="exampleInput"
-              placeholder="Tìm kiếm..."
-            />
-          </div>
-          <div class="form-group col-md-3 col-sm-12 mt-2">
-            <input
-              type="submit"
-              class="form-control bg-success"
-              id="exampleInput"
-              placeholder="Tìm kiếm..."
-              value="Tìm kiếm"
-            />
-          </div>
+            <div class="form-group col-md-9 col-sm-12 mt-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" class="form-control pl-5" id="exampleInput" placeholder="Tìm kiếm..." name="keyword">
+            </div>
+            <div class="form-group col-md-3 col-sm-12 mt-2">
+                <!-- <button type="submit" class="form-control bg-success" >Tìm kếm</button> -->
+                <input type="submit" class="form-control bg-success"  value="Tìm kiếm" name="search">
+            </div>
         </div>
-      </form>
+    </form>
     </div>
     <!--End form search-->
     <!-------------------------------------------------------------------------------------------->

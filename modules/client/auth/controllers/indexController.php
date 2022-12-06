@@ -2,7 +2,7 @@
 
 function construct()
 {
-    //    
+      
     load_model('index');
 }
 
@@ -84,40 +84,63 @@ function sign_upAction()
 }
 function saveSignUpPostAction()
 {
-    // $user = get_auth();
-    // request_auth(true);
+    
     $full_name = $_POST['full_name'];
+   // $email = test_input($_POST["email"]);
     $email = $_POST['email'];
     $password = $_POST['password'];
     $nhaplaipassword = $_POST['nhaplaipassword'];
     $numberphone = $_POST['numberphone'];
     $gender = $_POST['gender'];
-    if ($password === $nhaplaipassword && $gender != "") {
+  
+    if (empty($full_name)) {
+        push_notification('danger', ['Vui lòng nhập họ và tên']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    }
+   else if (empty($password)) {
+        push_notification('danger', ['Vui lòng nhập mật khẩu']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    }
+    else if ($nhaplaipassword == "") {
+        push_notification('danger', ['Vui lòng nhập lại mật khẩu']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    }else if ($nhaplaipassword != $password) {
+        push_notification('danger', ['Mật khẩu không trùng khớp']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    } else if (empty($numberphone)) {
+        push_notification('danger', ['Vui lòng nhập số điện thoại']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    }
+    else if ($gender == "") {
+        push_notification('danger', ['Vui lòng nhập giới tính']);
+        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        die();
+    }
+    
+    else if ($password === $nhaplaipassword && $gender != "") {
         $data = [
             "full_name" => $full_name, "email" => $email, "password" => $password,
             "numberphone" => $numberphone, "gender" => $gender
-        ];
+    ];
         insert_user($data);
-        // echo "<script> alert('Đăng ký tài khoản thành công') </script>";
         push_notification('success', ['Đăng ký tài khoản thành công']);
         header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
-    } else if ($gender == "") {
-        push_notification('danger', ['Vui lòng nhập giới tính']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
-    }
-    // else if($email==$user['email']){
-    //     push_notification('danger', ['Email đã tồn tại trong hệ thống']);
-    //     header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
-    // } 
+     
+    } 
 
-    else {
-        push_notification('danger', ['Vui lòng nhập lại mật khẩu']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+    // else {
+    //     push_notification('danger', ['Vui lòng nhập lại mật khẩu']);
+    //     header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
 
         // echo "<script> alert('Mật khẩu không trùng nhau. Vui lòng nhập lại mật khẩu') </script>";
 
 
-    }
+    // }
 }
 
 function editAction()

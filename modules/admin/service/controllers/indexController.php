@@ -22,6 +22,22 @@ function saveCreatePostAction() {
     $target_dir = "./upload/";
     $target_file = $target_dir . basename($_FILES["image"]["name"]);
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+    if (empty($name)) {
+        push_notification('danger', ['Vui lòng nhập vào tên dịch vụ']);
+        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        die();
+        
+    }if (empty($price)) {
+        push_notification('danger', ['Vui lòng nhập vào giá dịch vụ']);
+        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        die();
+    }
+    if (empty($description)) {
+        push_notification('danger', ['Vui lòng nhập vào mô tả']);
+        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        die();
+       
+    }
     create_services($name, $price, $description,$target_file);
     push_notification('success', ['Tạo mới dịch vụ thành công']);
     header('Location: /du_an_1_poly_hotel/?role=admin&mod=service');

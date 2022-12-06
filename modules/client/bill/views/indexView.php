@@ -3,7 +3,50 @@
 <form action="/du_an_1_poly_hotel/?role=client&mod=bill&action=insertBill" method="post">
     <h3>Thông tin đặt hàng</h3>
 
-    <div class="formdathang">
+    <div class="container">
+    <div class="card-body">
+        <div class="row">
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Tên người đặt hàng</label>
+                    <div class="input-group">
+                        <input type="text" name="full_name" class="form-control" placeholder="Tên người đặt hàng" aria-describedby="basic-addon2" />
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Email</label>
+                    <div class="input-group">
+                        <input type="text" name="email" class="form-control" placeholder="Email" aria-describedby="basic-addon2" />
+                        <!-- <div class="input-group-append"><span class="input-group-text">VND</span></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Địa chỉ</label>
+                    <div class="input-group">
+                        <input type="text" name="address" class="form-control" placeholder="Địa chỉ" aria-describedby="basic-addon2" />
+                        <!-- <div class="input-group-append"><span class="input-group-text">VND</span></div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col col-6 mt-3">
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <div class="input-group">
+                        <input type="text" name="numberphone" class="form-control" placeholder="Tên người đặt hàng" aria-describedby="basic-addon2" />
+                        <!-- <div class="input-group-append"><span class="input-group-text">VND</span></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    
+
+    <!-- <div class="formdathang">
         <div>
             <td>Người đặt hàng</td> <br>
             <td><input type="text" name="full_name"></td>
@@ -14,14 +57,14 @@
         </div>
         <div>
             <td>Email</td><br>
-            <td><input type="text" name="email"></td>
+            <td><input type="text" name="email" required></td>
         </div>
         <div>
             <td>Số điện thoại</td><br>
             <td><input type="text" name="numberphone"></td>
         </div>
 
-    </div>
+    </div> -->
     <br>
 
 
@@ -69,17 +112,17 @@
                 <?php
                 if (isset($_SESSION['cart'])) {
                     foreach ($_SESSION['cart'] as $key => $item) {
-                        $price=date("d",strtotime(($item['check_out_date'])) - strtotime($item['check_in_date']))*$item['price'] ;
+                        $price = date("d", strtotime(($item['check_out_date'])) - strtotime($item['check_in_date'])) * $item['price'];
 
                         echo '
                         <tr>
-                            <td>'.$item['name'].'</td>
-                            <td><img src="'.$item['image'].'" width="50"></td>
-                            <td>'.$item['check_in_date'].'</td>
-                            <td>'.$item['check_out_date'].'</td>
-                            <td>$'.$price.'</td>
+                            <td>' . $item['name'] . '</td>
+                            <td><img src="' . $item['image'] . '" width="50"></td>
+                            <td>' . $item['check_in_date'] . '</td>
+                            <td>' . $item['check_out_date'] . '</td>
+                            <td>$' . $price . '</td>
 
-                            <td><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete&id='.$key.'">Xóa  </a>  </td>
+                            <td><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete&id=' . $key . '">Xóa  </a>  </td>
                         </tr>
                         
                         
@@ -95,7 +138,7 @@
 
     <br>
 
-   
+
     <div class="dongydathang">
         <input type="submit" value="Đồng ý đặt hàng" name="dongydathang">
         <input type="reset" value="Nhập lại" name="nhaplai">

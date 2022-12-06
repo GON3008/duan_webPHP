@@ -22,12 +22,18 @@ function createPostAction() {
     $name = $_POST['name'];
     $description = $_POST['description'];
     if (empty($name)) {
-        push_notification('danger', ['Vui lòng nhập vào tên danh mục']);
+        push_notification('danger', ['Vui lòng nhập vào tên loại phòng']);
+        header('Location: /du_an_1_poly_hotel/?role=admin&mod=category&action=create');
+        die();
+    }if (empty($description)) {
+        push_notification('danger', ['Vui lòng nhập vào mô tả']);
         header('Location: /du_an_1_poly_hotel/?role=admin&mod=category&action=create');
         die();
     }
+
+    
     create_category($name, $description);
-    push_notification('success', ['Tạo mới danh mục sản phẩm thành công']);
+    push_notification('success', ['Tạo mới loại phòng thành công']);
     header('Location: /du_an_1_poly_hotel/?role=admin&mod=category');
 }
 

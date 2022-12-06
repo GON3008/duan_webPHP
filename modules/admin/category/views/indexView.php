@@ -39,7 +39,7 @@
                                     </g>
                                 </svg>
                                 <!--end::Svg Icon-->
-                            </span>Thêm mới danh mục</a>
+                            </span>Thêm mới loại phòng</a>
                         <!--end::Button-->
                     </div>
                 </div>

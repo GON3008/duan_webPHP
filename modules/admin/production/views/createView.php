@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới sản phẩm</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới phòng</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -21,7 +21,7 @@
         <!--begin::Card-->
         <div class="card card-custom gutter-b example example-compact">
             <div class="card-header">
-                <h3 class="card-title">Form thông tin sản phẩm mới</h3>
+                <h3 class="card-title">Form thông tin phòng mới</h3>
             </div>
             <!--begin::Form-->
             <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=production&action=saveCreate" enctype="multipart/form-data">
@@ -29,11 +29,11 @@
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
-                                <label>Tiêu đề sản phẩm</label>
-                                <input type="text" name="name" class="form-control" placeholder="Nhập vào tiêu đề sản phẩm" />
+                                <label>Tên phòng</label>
+                                <input type="text" name="name" class="form-control" placeholder="Nhập vào tên phòng" />
                             </div>
                             <div class="form-group">
-                                <label>Danh mục sản phẩm</label>
+                                <label>Danh sách loại phòng</label>
                                 <select class="form-control select2" name="category_id">
                                     <?php
                                     foreach ($categories as $category) {
@@ -45,16 +45,11 @@
                                 </select>
                             </div>
                             <div class="form-group mb-1">
-                                <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
+                                <label for="descriptionCategoryInput">Chi tiết phòng</label>
                                 <textarea name="description" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
-                        <div class="col col-4 mt-3">
-                            <div class="form-group">
-                                <label>Số lượng trong kho</label>
-                                <input type="number" name="count" class="form-control" placeholder="Nhập vào số lượng" />
-                            </div>
-                        </div>
+                       
                         <div class="col col-4 mt-3">
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>
@@ -73,7 +68,12 @@
                                 </select>
                             </div>
                         </div>
-
+                        <div class="col col-4 mt-3">
+                            <div class="form-group">
+                                <label>Hình ảnh</label>
+                                <input type="file" name="image" id="">
+                            </div>
+                        </div>
                         <!-- <div class="col col-9">
                             <div><label>Hình ảnh sản phẩm</label></div>
                             <div class="dropzone dropzone-default dropzone-primary" id="kt_dropzone_3">
@@ -83,10 +83,10 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col col-9">
+                        <!-- <div class="col col-9">
                             <div><label for="">Hình ảnh sản phẩm</label></div>
                             <input type="file" name="image" id="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="card-footer">

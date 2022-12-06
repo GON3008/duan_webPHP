@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý sản phẩm</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý phòng</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -22,8 +22,8 @@
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Danh sách sản phẩm
-                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các sản phẩm có trên hệ thống</span>
+                    <h3 class="card-label">Danh sách phòng
+                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các phòng có trên hệ thống</span>
                     </h3>
                 </div>
                 <div class="card-toolbar">
@@ -69,7 +69,7 @@
                             <th title="Field #1">ID phòng</th>
                             <th title="Field #2">Tên phòng</th>
                             <th title="Field #2">Ảnh phòng</th>
-                            <th title="Field #2">Số lượng</th>
+                         
                             <th title="Field #2">Giá phòng</th>
                             <th title="Field #2">Trạng thái</th>
                             <th title="Field #2">Ngày tạo</th>                           
@@ -85,13 +85,11 @@
                                 <td><?php echo ($production['id']) ?></td>
                                 <td><?php echo ($production['name']) ?></td>
                                 <td><img src="<?php echo ($production['image']) ?>" alt="" width="50"></td>
-                                <td><?php echo ($production['count']) ?></td>
-                              
                                 <td><?php echo ($production['price']) ?></td>
                                 <td><?php echo ($production['status']== 1 ? "Có thể thuê" : "Không thể thuê") ?></td>
-                                <td><?php echo ($production['created_at']) ?></td>
                                
-                                <td><?php echo ($production['full_name']) ?></td>
+                               
+                               
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
                                         <a href="/du_an_1_poly_hotel/?role=admin&mod=production&action=update&id=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -112,9 +110,11 @@
                                                 </svg> </span> </a>
                                     </span>
                                 </td>
+                                <td><?php echo ($production['full_name']) ?></td>
+                                <td><?php echo ($production['created_at']) ?></td>
                                 <td><?php echo ($production['description']) ?></td>
 
-                                <td><?php echo $production['description'] ?></td>
+                               
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

@@ -12,7 +12,7 @@ function get_one_production($id) {
     return $result;
 }
 
-function create_production($name, $description,$target_file,$count,$price,$categories,$status) {
+function create_production($name, $description,$target_file,$price,$categories,$status) {
     $user = get_auth();
     $id = db_insert('productions', [
         'name' => $name,
@@ -21,7 +21,7 @@ function create_production($name, $description,$target_file,$count,$price,$categ
         'created_id' => $user['id'],
         'created_at' => date('Y-m-d H:i:s'),
         'image' => $target_file,
-        'count' => $count,
+        
         'price' => $price,
         'category_id' => $categories
     ]);

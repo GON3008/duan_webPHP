@@ -66,6 +66,21 @@ function insertBillPostAction()
       $numberphone = $_POST['numberphone'];
       $address = $_POST['address'];
       $created_id = $_SESSION['auth']['id'];
+      // if(empty($full_name)){
+      //       push_notification('danger', ['Vui lòng nhập vào tên người đặt phòng']);
+      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
+      //       die();
+      // }
+      // if(empty($address)){
+      //       push_notification('danger', ['Vui lòng nhập vào địa chỉ']);
+      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
+      //       die();
+      // }
+      // if(empty($numberphone)){
+      //       push_notification('danger', ['Vui lòng nhập vào số điện thoại']);
+      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
+      //       die();
+      // }
       $bill = get_list_bill();
       $check = false;
       foreach ($bill as $item) {
@@ -107,6 +122,7 @@ function insertBillPostAction()
             
             // var_dump($price);
             // die();
+           
             if ($check2 == false || count($bill_detail) == 0) {
                   insert_bill_detail([
                         "bill_id" =>  $get_one_bill['id'],
