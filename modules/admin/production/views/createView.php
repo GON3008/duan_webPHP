@@ -54,7 +54,7 @@
                             <div class="form-group">
                                 <label>Giá cho mỗi sản phẩm</label>
                                 <div class="input-group">
-                                    <input type="text" name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
+                                    <input type="number" name="price" class="form-control" placeholder="Giá cho mỗi sản phẩm" aria-describedby="basic-addon2" />
                                     <div class="input-group-append"><span class="input-group-text">VND</span></div>
                                 </div>
                             </div>

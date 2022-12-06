@@ -143,58 +143,11 @@
     <!--End Content-->
     <!-------------------------------------------------------------------------------------------->
 
-    <!--Banner 2-->
-    <div class="container-fluid">
-        <div class="row mt-4">
-            <img src="public/image/banner4.png" alt="" class="img-fluid">
-        </div>
-    </div>
-    <!--End Banner 2-->
+  
 
     <!-------------------------------------------------------------------------------------------->
 
-    <!--Top Favorite Rooms-->
-
-    <div class="container-fluid mt-4">
-        <div class="row text-center">
-            <div class="col-12 text">
-                <h1>Phòng được nhiều người yêu thích nhất</h1>
-            </div>
-        </div>
-              
-
-
-        <div class="slide-container swiper mt-4">
-            <div class="row slide-content2">
-                <div class="card-wrapper swiper-wrapper col-12">
-                    <?php foreach($production as $item) :?>
-
-                    <div class="card swiper-slide ">
-                        <div class="card-image">
-                            <img src="<?= $item['image'] ?>" alt="" width="100%" class="img-fluid">
-                        </div>
-
-                        <div class="card-name text col-12">
-                            <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>">
-                                <h2 class="text"><?= $item['name'] ?> </h2>
-                            </a>
-                            <a href="" class="text-danger" style="float:left ; font-size:20px ;"> $<?= $item['price'] ?></a>
-                            <a href="" class="text" style="float:right ; "><span class="rounded-circle"><i class="fa-solid fa-heart" style="margin:0px 0px 0px 3.5px;"></i></span></a>
-                        </div>
-                    </div>
-                <?php endforeach ?>
-            </div>
-        </div>
-
-        <div class="swiper-button-next swiper-navBtn"></div>
-        <div class="swiper-button-prev swiper-navBtn"></div> <br>
-        <div class="swiper-pagination"></div>
-    </div>
-</div>
-
-
-
-<!--End Content-->
+   
 <!-------------------------------------------------------------------------------------------->
 
 <!--Banner 2-->
