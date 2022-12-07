@@ -31,7 +31,7 @@
                         <div class="form-row">
                             <div class="form-group col-lg-6 ">
                                 <!-- <label for="my-login">Email</label> -->
-                                <input id="my-login" class="form-control border-bottom"  type="password" name="password_old" placeholder="Mật khẩu cũ">
+                                <input id="my-login" class="form-control border-bottom"  type="password" name="password_old" placeholder="Mật khẩu hiện tại">
                             </div>
                             <div class="form-group col-lg-6 ">
                                 <!-- <label for="my-login">Email</label> -->

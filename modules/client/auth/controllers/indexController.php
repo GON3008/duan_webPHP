@@ -190,6 +190,16 @@ function saveChangePasswordPostAction()
         $password_old = $_POST['password_old'];
         $password_new = $_POST['password_new'];
         // $item=get_auth_user($email, $password_old);
+        if(empty($password_old)){
+             push_notification('success', ['Mật khẩu cũ không được để trống']);
+            header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+            die();
+        }
+        if(empty($password_new)){
+            push_notification('success', ['Mật khẩu mới không được để trống']);
+           header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+           die();
+       }
         $sql = "select * from users where email='$email' and password='$password_old' limit 1";
         $results = mysqli_query($conn, $sql);
         $count = mysqli_num_rows($results);
@@ -198,7 +208,7 @@ function saveChangePasswordPostAction()
             echo "<script> alert('Đổi mật khẩu thành công!!!') </script>";
             header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
         } else {
-            echo "<script> alert('Đổi mật khẩu không thành công!!!') </script>";
+            echo "<script> alert('Mật khẩu hiện tại không đúng!!!') </script>";
             header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
         }
     } else {
