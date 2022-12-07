@@ -7,26 +7,30 @@ function construct() {
 
 function indexAction() {
     $id = $_GET['id'];
-   
-    // $data['productions'] = get_one_production($id);
+    //load_room->home_details
+    
     $production = get_one_production($id);
     $data['productions' ] = $production;
+    //-----
+
+    //load_room_cùng loại ->trang chi tiết
     $cat=$production['category_id'];
     $data['pro_cat']=get_list_pro_by_catid($cat);
-    $categories=get_list_categories();
-    $data['categories']= $categories;
+    // $categories=get_list_categories();
+    // $data['categories']= $categories;
+    //-------
+    // bình luận trên trang chi tiết
     $data['comments'] =get_list_comments($id);
     get_list_view(["views"=>$production['views']+1] ,$id);
-    
-
-    // $data1['category'] = $categories;
+    //--------
+    //nếu có phòng thì chuyển sang trang chi tiết
 
     if ($production) {
         load_view('index', $data);
     } else {
         header('Location: /du_an_1_poly_hotel/?role=client');
     }
-    // load_view('index', $data);
+  
 }
 // function indexCategoryAction() {
 //     $id = $_GET['id'];
@@ -45,6 +49,7 @@ function indexAction() {
 //     load_view('index', $data);
 
 // }
+// bình luận trên trang
 function addCommentsPostAction(){
      //request_auth(true);
      if(is_auth()){
