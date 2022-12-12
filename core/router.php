@@ -10,6 +10,7 @@ if (file_exists($request_path)) {
 }
 
 // get method if get default null
+//check get
 $method = $_SERVER['REQUEST_METHOD'] === 'GET' ? '' : $_SERVER['REQUEST_METHOD'];
 
 $action_name = get_action().ucfirst(strtolower($method)).'Action';
