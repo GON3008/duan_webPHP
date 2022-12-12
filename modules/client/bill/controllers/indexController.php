@@ -66,21 +66,7 @@ function insertBillPostAction()
       $numberphone = $_POST['numberphone'];
       $address = $_POST['address'];
       $created_id = $_SESSION['auth']['id'];
-      // if(empty($full_name)){
-      //       push_notification('danger', ['Vui lòng nhập vào tên người đặt phòng']);
-      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
-      //       die();
-      // }
-      // if(empty($address)){
-      //       push_notification('danger', ['Vui lòng nhập vào địa chỉ']);
-      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
-      //       die();
-      // }
-      // if(empty($numberphone)){
-      //       push_notification('danger', ['Vui lòng nhập vào số điện thoại']);
-      //       header('Location: /du_an_1_poly_hotel/?role=client&mod=bill&action=index');
-      //       die();
-      // }
+     
       $bill = get_list_bill();
       $check = false;
       foreach ($bill as $item) {
@@ -92,8 +78,8 @@ function insertBillPostAction()
       if ($check == false) {
             insert_bill(["created_id" => $created_id]);
       }
-      $check2 = false;
 
+      $check2 = false;
       $bill_detail = get_list_bill_detail();
       // echo "<pre>";
       // var_dump($_SESSION['cart']);
@@ -101,21 +87,17 @@ function insertBillPostAction()
       // die();
       $get_one_bill = get_one_bill($_SESSION['auth']['id']);
       foreach ($_SESSION['cart'] as $cart) {
-            //$price=(strtotime(($cart['check_out_date'])) - strtotime($cart['check_in_date']))*$cart['price'] ;
             if (count($bill_detail) > 0) {
                   foreach ($bill_detail as $item) {
                         if ($cart['id'] == $item['product_id'] && (strtotime(($cart['check_in_date'])) - strtotime($item['check_out_date']) < 0)) {
                               $check2 = true;
                               break;
-                              //strtotime(date("Y-m-d H:i:s")
                         }
                   }
             }
             if ((strtotime(($cart['check_in_date'])) - strtotime($cart['check_out_date']) > 0)) {
-
                   echo "<script> alert('Phòng ".$cart['name']." không thể đặt. Do có ngày trả nhỏ hơn ngày nhận!!!') </script>";
                   header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=bill&action=index");
-                 
                   die();
             }
             $price=date("d",strtotime(($cart['check_out_date'])) - strtotime($cart['check_in_date']))*$cart['price'] ;
@@ -188,8 +170,7 @@ function deleteAction()
         }
 
 
-      //unset($_SESSION['cart']);
-      // session_destroy($_SESSION['cart']);
+     
       header('location:/du_an_1_poly_hotel/?role=client&mod=bill&action=index');
  
 
