@@ -23,11 +23,13 @@
                             khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng
                             trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp
                             nhận với những thay đổi đó.
+                            <br>
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
                             <img src="image/banner3.png" alt="">
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
+                            <br>
 
                             Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với
                             các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần
@@ -35,6 +37,7 @@
                             khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng
                             trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp
                             nhận với những thay đổi đó.
+                            <br>
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
                             <img src="image/banner3.png" alt="">

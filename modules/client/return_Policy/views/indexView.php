@@ -16,8 +16,10 @@
                             1. Hỗ trợ đổi trả:
                             Công ty chúng tôi có hỗ trợ đổi trả các dịch vụ , phòng khi khách không ưng ý với thái độ phục vụ hay
                             không ứng ý về vật chất , cam đoan đổi trả phòng hoặc hoàn trả tiền dịch vụ khi khách hàng không thoải mái
+                            <br>
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
+                            <br>
 
                             Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với
                             các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần
@@ -25,18 +27,21 @@
                             khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng
                             trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp
                             nhận với những thay đổi đó.
+                            <br>
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
                             <img src="image/banner3.png" alt="">
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
+                            <br>
 
                             Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với
                             các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần
                             nào trong Điều khoản mua bán hàng hóa này, vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay
                             khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng
-                            trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp
+                            trang web, sau khi các thay đổi về .Điều khoản này được đăng tải, có nghĩa là quý khách chấp
                             nhận với những thay đổi đó.
+                            <br>
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
                             <img src="image/banner3.png" alt="">

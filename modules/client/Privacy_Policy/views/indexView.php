@@ -15,8 +15,10 @@
                         <p class="text">
                             1. Bảo mật dữ liệu thông tin khách hàng:
                             Chúng tôi luôn duy trì các phương án an ninh về mặt vật lý, điện tử và có tổ chức để bảo vệ thông tin của khách hàng khỏi bị hủy hoại một cách vô tình hoặc phi pháp, hay bị mất mát, chỉnh sửa một cách vô tình, hoặc bị tiết lộ và truy cập trái phép. Agoda sử dụng công nghệ Tầng Ổ Bảo Mật (Secure Socket Layer) để mã hóa thông tin thẻ tín dụng khi truyền dữ liệu. Từ tài khoản cá nhân, khách hàng có thể lưu thông tin thẻ tín dụng để đặt phòng và thanh toán nhanh hơn về sau. Thông tin thẻ sẽ được mã hóa và quý khách có thể đăng nhập vào tài khoản cá nhân của mình để xóa, chỉnh sửa hoặc thêm thông tin thẻ tín dụng khác. Tuy không thể thay đổi số thẻ vì lý do an ninh nhưng có thể xóa bỏ thông tin thẻ. Khi xem chi tiết thẻ, chỉ có 4 chữ số cuối của thẻ sẽ được hiển thị. Xin lưu ý, chúng tôi sẽ lưu 4 chữ số cuối của thẻ tín dụng một cách an toàn mỗi khi đặt phòng (bắt buộc phải thực hiện việc này để quản lý các yêu cầu hoàn tiền nếu có cho đặt phòng đó).
+                            <br>
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
+                            <br>
 
                             Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với
                             các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần
@@ -24,9 +26,11 @@
                             khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng
                             trang web, sau khi các thay đổi về Điều khoản này được đăng tải, có nghĩa là quý khách chấp
                             nhận với những thay đổi đó.
+                            <br>
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
                             <img src="image/banner3.png" alt="">
+                            <br>
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
 
