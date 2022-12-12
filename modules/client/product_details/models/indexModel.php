@@ -15,7 +15,7 @@ function get_one_production($id) {
 //     $result=db_fetch_array("select * from  productions where category_id=".$category_id." AND id<>" .$id);
 //     return $result;
 // }
-// lấy những phòng có cùng danh mục 
+// lấy tất cả những phòng có cùng danh mục 
 function get_list_pro_by_catid($cat)
 {
     $result=  db_fetch_array("select * from  productions where category_id=$cat");

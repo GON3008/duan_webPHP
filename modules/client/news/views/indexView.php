@@ -6,7 +6,7 @@
     <!-- chính sách đổi trả -->
     <div class="container-returnpolicy">
         <div class="row-text-center">
-            <h1><a href="/du_an_1_poly_hotel/?role=client">Trang chủ</a>/ <a href="/du_an_1_poly_hotel/?role=client&mod=service_Policy&action=index">Trang chính sách dịch vụ</a></h1>
+            <h1><a href="/du_an_1_poly_hotel/?role=client">Trang chủ</a>/ <a href="/du_an_1_poly_hotel/?role=client&mod=Privacy_Policy&action=index">Trang Tin Tức</a></h1>
             <div class="col-text">
                 <div class="container-returnpolicy-right">
                     <h1><a href="#">Bài viết</a></h1>
@@ -25,7 +25,7 @@
                             nhận với những thay đổi đó.
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
-                            <img src="image/banner3.png" alt="">
+                            <img src="./public/image/banner1.png" alt="">
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
 
@@ -37,7 +37,7 @@
                             nhận với những thay đổi đó.
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
-                            <img src="image/banner3.png" alt="">
+                            <img src="./public/image/banner3.png" alt="">
 
                         </p>
                     </div>

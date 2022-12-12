@@ -13,7 +13,8 @@
                     <div class="posts">
 
                         <p class="text">
-                            1. Giới thiệu
+                            1. Bảo mật dữ liệu thông tin khách hàng:
+                            Chúng tôi luôn duy trì các phương án an ninh về mặt vật lý, điện tử và có tổ chức để bảo vệ thông tin của khách hàng khỏi bị hủy hoại một cách vô tình hoặc phi pháp, hay bị mất mát, chỉnh sửa một cách vô tình, hoặc bị tiết lộ và truy cập trái phép. Agoda sử dụng công nghệ Tầng Ổ Bảo Mật (Secure Socket Layer) để mã hóa thông tin thẻ tín dụng khi truyền dữ liệu. Từ tài khoản cá nhân, khách hàng có thể lưu thông tin thẻ tín dụng để đặt phòng và thanh toán nhanh hơn về sau. Thông tin thẻ sẽ được mã hóa và quý khách có thể đăng nhập vào tài khoản cá nhân của mình để xóa, chỉnh sửa hoặc thêm thông tin thẻ tín dụng khác. Tuy không thể thay đổi số thẻ vì lý do an ninh nhưng có thể xóa bỏ thông tin thẻ. Khi xem chi tiết thẻ, chỉ có 4 chữ số cuối của thẻ sẽ được hiển thị. Xin lưu ý, chúng tôi sẽ lưu 4 chữ số cuối của thẻ tín dụng một cách an toàn mỗi khi đặt phòng (bắt buộc phải thực hiện việc này để quản lý các yêu cầu hoàn tiền nếu có cho đặt phòng đó).
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
 
@@ -47,11 +48,11 @@
                     <div class="category">
                         <h2><a href="#">Trang chủ</a></h2>
                         <hr>
-                        <h2><a href="#">Giới thiệu</a></h2>
+                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=introduce&action=index">Giới thiệu</a></h2>
                         <hr>
-                        <h2><a href="#">Tin tức</a></h2>
+                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=news&action=index">Tin tức</a></h2>
                         <hr>
-                        <h2><a href="#">Liên hệ</a></h2>
+                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=contact&action=index">Liên hệ</a></h2>
                         <hr>
                         <h2><a href="/du_an_1_poly_hotel/?role=client&mod=return_Policy&action=index">Chính sách đổi trả</a></h2>
                         <hr>

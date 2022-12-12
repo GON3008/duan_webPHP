@@ -6,7 +6,7 @@
     <!-- chính sách đổi trả -->
     <div class="container-returnpolicy">
         <div class="row-text-center">
-            <h1><a href="/du_an_1_poly_hotel/?role=client">Trang chủ</a>/ <a href="/du_an_1_poly_hotel/?role=client&mod=service_Policy&action=index">Trang chính sách dịch vụ</a></h1>
+            <h1><a href="/du_an_1_poly_hotel/?role=client">Trang chủ</a>/ <a href="/du_an_1_poly_hotel/?role=client&mod=Privacy_Policy&action=index">Trang Giới Thiệu </a></h1>
             <div class="col-text">
                 <div class="container-returnpolicy-right">
                     <h1><a href="#">Bài viết</a></h1>

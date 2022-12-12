@@ -56,13 +56,13 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tin tức</a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=news&action=index">Tin tức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Giới thiệu</a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=introduce&action=index">Giới thiệu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Liên hệ</a>
+                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=contact&action=index">Liên hệ</a>
                     </li>
                 </ul>
                 <?php if(isset($_SESSION['auth'])){ ?>
