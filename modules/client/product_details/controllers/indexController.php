@@ -56,12 +56,16 @@ function addCommentsPostAction(){
         $product_id = $_GET["id"];
         $description = $_POST["description"];
         $created_id = $_SESSION["auth"]['id'];
-        $created_at = date("Y-m-d H:i:s");
+
+      
+      
+        // $order_price = $_POST[""];
+        // $total_price = $order_quantity * $order_price;
+
         $data = [
             'description' => $description,
             'product_id' => $product_id,
             'created_id' => $created_id,
-            'created_at' => $created_at
         ];
       
         add_comments($data);
@@ -73,3 +77,5 @@ function addCommentsPostAction(){
    
 
 }
+
+

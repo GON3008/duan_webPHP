@@ -99,27 +99,25 @@
         <table>
             <thead>
                 <tr>
-                    <th>Tên phòng</th>
+                    <th>Tên sản phẩm</th>
                     <th>Hình</th>
-                    <th>Thời gian nhận phòng</th>
-                    <th>Thời gian trả phòng</th>
+                    <th>Số lượng</th>
                     <th>Thành tiền</th>
                     <th><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete" class="">Xoá tất cả</a></th>
                 </tr>
             </thead>
-
             <tbody>
                 <?php
                 if (isset($_SESSION['cart'])) {
                     foreach ($_SESSION['cart'] as $key => $item) {
-                        $price = date("d", strtotime(($item['check_out_date'])) - strtotime($item['check_in_date'])) * $item['price'];
+                        $price = $item['order_quantity'] * $item['price'];
 
                         echo '
                         <tr>
                             <td>' . $item['name'] . '</td>
                             <td><img src="' . $item['image'] . '" width="50"></td>
-                            <td>' . $item['check_in_date'] . '</td>
-                            <td>' . $item['check_out_date'] . '</td>
+                          
+                            <td>' . $item['order_quantity'] . '</td>
                             <td>$' . $price . '</td>
 
                             <td><a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=delete&id=' . $key . '">Xóa  </a>  </td>
@@ -137,11 +135,13 @@
     </div>
 
     <br>
-
+    <div class="d-flex justify-content-between">
+    <h2>Tổng tiền:</h2>
 
     <div class="dongydathang">
         <input type="submit" value="Đồng ý đặt hàng" name="dongydathang">
         <input type="reset" value="Nhập lại" name="nhaplai">
+    </div>
     </div>
 </form>
 

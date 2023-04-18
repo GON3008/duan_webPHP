@@ -38,8 +38,7 @@
                     <thead>
                         <th>Mã hóa đơn</th>
                         <th>Tên phòng</th>
-                        <th>Ngày nhận phòng</th>
-                        <th>Ngày trả phòng</th>
+                        <th>Số lượng</th>
                         <th>Tổng tiền</th>
                     </thead>
                     <tbody>
@@ -48,7 +47,6 @@
                                     <tr> 
                                     <td>' . $value['id'] . '</td>
                                     <td>' . $value['name'] . '</td>
-                                    <td>' . $value['check_in_date'] . '</td>
                                     <td>' . $value['check_out_date'] . '</td>
                                     <td>' . $value['price'] . '</td>
                                     </tr>

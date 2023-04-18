@@ -246,6 +246,7 @@ function request_auth($isLogin = true)
     }
 }
 
+// chuyển đến view sản phẩm và truyền biến $total_price vào để hiển thị
 
 
 // function request_auth($isLogin = true)

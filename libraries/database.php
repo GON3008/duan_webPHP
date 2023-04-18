@@ -1,5 +1,4 @@
 <?php
-//Thuỷ
 // Hàm kết nối dữ liệu
 function db_connect() {
     global $conn;

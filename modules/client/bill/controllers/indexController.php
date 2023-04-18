@@ -20,8 +20,8 @@ function indexPostAction()
 {
       if (is_auth()) {
             $id = $_POST['id'];
-            $check_in_date = $_POST['check_in_date'];
-            $check_out_date = $_POST['check_out_date'];
+            $order_quantity = $_POST['order_quantity'];
+            // $check_out_date = $_POST['check_out_date'];
             $production = get_one_production($id);
 
             $data['productions'] = $production;
@@ -29,8 +29,8 @@ function indexPostAction()
                   $_SESSION['cart'] = [];
             }
             
-            $production['check_in_date'] = $check_in_date;
-            $production['check_out_date'] = $check_out_date;
+            $production['order_quantity'] = $order_quantity;
+            // $production['check_out_date'] = $check_out_date;
             // echo "<pre>";
             //       var_dump(  $_SESSION['cart']);die();
             $check = false;
@@ -87,20 +87,7 @@ function insertBillPostAction()
       // die();
       $get_one_bill = get_one_bill($_SESSION['auth']['id']);
       foreach ($_SESSION['cart'] as $cart) {
-            if (count($bill_detail) > 0) {
-                  foreach ($bill_detail as $item) {
-                        if ($cart['id'] == $item['product_id'] && (strtotime(($cart['check_in_date'])) - strtotime($item['check_out_date']) < 0)) {
-                              $check2 = true;
-                              break;
-                        }
-                  }
-            }
-            if ((strtotime(($cart['check_in_date'])) - strtotime($cart['check_out_date']) > 0)) {
-                  echo "<script> alert('Phòng ".$cart['name']." không thể đặt. Do có ngày trả nhỏ hơn ngày nhận!!!') </script>";
-                  header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=bill&action=index");
-                  die();
-            }
-            $price=date("d",strtotime(($cart['check_out_date'])) - strtotime($cart['check_in_date']))*$cart['price'] ;
+            $price=$cart['order_quantity']*$cart['price'] ;
             
             // var_dump($price);
             // die();
@@ -114,8 +101,7 @@ function insertBillPostAction()
                         "numberphone" => $numberphone,
                         "address" => $address,
                         "total_money" => $price,
-                        "check_in_date" => $cart['check_in_date'],
-                        "check_out_date" => $cart['check_out_date']
+                        "order_quantity" => $cart['order_quantity']
 
 
                   ]);

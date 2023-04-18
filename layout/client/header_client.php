@@ -67,6 +67,9 @@
                 </ul>
                 <?php if(isset($_SESSION['auth'])){ ?>
                     <ul class="navbar-nav ml-auto">
+                        <a style="margin: 0px 0px 0px 9px; margin-right: 10px" href="#">
+                            <img width="40px" src="public/image/basket.png" alt="">
+                        </a>
                        <a href="" style="margin-right:10px;"><span class="rounded-circle"> <i class="fa-solid fa-heart" style="color:white; margin:7px 0px 0px 5px ; font-size:22px;"></i></span></a> 
                         <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation"><span class="rounded-circle pl-1"> <i style="color:white; font-size:22px; margin:5px 0px 0px 3px ;" class="fa-regular fa-user"></i></span></a>
                         
