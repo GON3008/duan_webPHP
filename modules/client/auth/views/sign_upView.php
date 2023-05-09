@@ -1,10 +1,10 @@
 <?php require "layout/client/header_client.php" ?>
 <!----------------------------------------------------------------------------------------------------->
         <!--Đăng ký-->
-        <div class="container bg-light">
+        <div style="margin-bottom: 50px;" class="container bg-light">
             <div class="row mt-5">
                 <div class="col-md-6 img-login">
-                    <img src="public/image/logopolyhotel.png" class="img-fluid" width="100%" alt="">
+                    <img src="public/image/lgdk.png" class="img-fluid" width="100%" height="100%" alt="">
                 </div>
                 <div class="col-md-6 mt-5">
                     <h2>Tạo tài khoản</h2>
@@ -19,7 +19,7 @@
                        </div>
                     </div>
                     <h5 class="text-center mt-2 mb-3">-Hoặc-</h5> -->
-                    <form action="/du_an_1_poly_hotel/?role=client&mod=auth&action=saveSignUp" method="POST">
+                    <form action="/MiuStore/?role=client&mod=auth&action=saveSignUp" method="POST">
                         <div class="form-group">
                             <!-- <label for="my-login">Email</label> -->
                             <input id="my-login" class="form-control border-bottom"  type="text" name="full_name" placeholder="Họ và tên" >
@@ -67,7 +67,7 @@
                         
                     </form>
                     <div style="margin-bottom:40px ;">
-                        Bạn đã có tài khoản? <a href="/du_an_1_poly_hotel/?role=client&mod=auth" style="color:#00a79e;">Đăng nhập</a>
+                        Bạn đã có tài khoản? <a href="/MiuStore/?role=client&mod=auth" style="color:#00a79e;">Đăng nhập</a>
                     </div>
                  
                 </div>

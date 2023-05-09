@@ -22,13 +22,23 @@
     <!--Link CSS-->
     <link rel="stylesheet" href="public/css/style.css">
 </head>
-
+  <style>
+    .navbar {
+    background-color: #F5F5F5 !important;
+}
+    .navbar li a{
+        color: black !important;
+    }
+    .navbar li a:hover {
+    color: #87CBB9 !important;
+}
+  </style>
 <body>
 
     <!--Menu-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav style="" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href=""><img src="public/image/logopolyhotel.png" class="" width="90"
+            <a class="navbar-brand" href=""><img src="public/image/lg (1).png" class="" width="110"
                     alt=""></a>
 
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -37,50 +47,51 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav mx-auto">
+                <ul  class="navbar-nav mx-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client">Trang chủ<span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="/MiuStore/?role=client">Trang chủ<span class="sr-only">(current)</span></a>
                     </li>
 
                     
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chính sách
                         </a>
                         <div class="dropdown-menu bg-color" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" style="color:gray;" href="/du_an_1_poly_hotel/?role=client&mod=Privacy_Policy&action=index">Chính sách bảo mật</a>
-                            <a class="dropdown-item" style="color:gray;" href="/du_an_1_poly_hotel/?role=client&mod=return_Policy&action=index">Chính sách đổi trả</a>
-                            <a class="dropdown-item" style="color:gray;" href="/du_an_1_poly_hotel/?role=client&mod=service_Policy&action=index">Chính sách dịch vụ</a>
+                            <a class="dropdown-item" style="color:gray;" href="/MiuStore/?role=client&mod=Privacy_Policy&action=index">Chính sách bảo mật</a>
+                            <a class="dropdown-item" style="color:gray;" href="/MiuStore/?role=client&mod=return_Policy&action=index">Chính sách đổi trả</a>
+                            <a class="dropdown-item" style="color:gray;" href="/MiuStore/?role=client&mod=service_Policy&action=index">Chính sách dịch vụ</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=news&action=index">Tin tức</a>
+                        <a   class="nav-link" href="/MiuStore/?role=client&mod=news&action=index">Tin tức</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=introduce&action=index">Giới thiệu</a>
+                        <a  class="nav-link" href="/MiuStore/?role=client&mod=introduce&action=index">Giới thiệu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=contact&action=index">Liên hệ</a>
+                        <a  class="nav-link" href="/MiuStore/?role=client&mod=contact&action=index">Liên hệ</a>
                     </li>
                 </ul>
                 <?php if(isset($_SESSION['auth'])){ ?>
                     <ul class="navbar-nav ml-auto">
-                        <a style="margin: 0px 0px 0px 9px; margin-right: 10px" href="#">
+                        <a style="margin: 0px 0px 0px 9px; margin-right: 10px" href="/MiuStore/?role=client&mod=carts&action=index">
                             <img width="40px" src="public/image/basket.png" alt="">
+                         
                         </a>
-                       <a href="" style="margin-right:10px;"><span class="rounded-circle"> <i class="fa-solid fa-heart" style="color:white; margin:7px 0px 0px 5px ; font-size:22px;"></i></span></a> 
-                        <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation"><span class="rounded-circle pl-1"> <i style="color:white; font-size:22px; margin:5px 0px 0px 3px ;" class="fa-regular fa-user"></i></span></a>
+                       <a href="" style="margin-right:10px;"><span class="rounded-circle"> <i class="fa-solid fa-heart" style="color:black; margin:7px 0px 0px 5px ; font-size:22px;"></i></span></a> 
+                        <a href="/MiuStore/?role=client&mod=auth&action=infomation"><span class="rounded-circle pl-1"> <i style="color:black; font-size:22px; margin:5px 0px 0px 3px ;" class="fa-regular fa-user"></i></span></a>
                         
                     </ul>
                     <?php }else{ ?>
                         <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up">Đăng ký</a>
+                        <a  class="nav-link" href="/MiuStore/?role=client&mod=auth&action=sign_up">Đăng ký</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/du_an_1_poly_hotel/?role=client&mod=auth">Đăng nhập</a>
+                        <a  class="nav-link" href="/MiuStore/?role=client&mod=auth">Đăng nhập</a>
                     </li>
                 </ul>
                         <?php } ?>
@@ -91,6 +102,5 @@
             </div>
         </div>
     </nav>
-    <div class="light"></div>
 
     <!--End Menu--> 

@@ -24,30 +24,30 @@ function saveCreatePostAction() {
     move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
     if (empty($name)) {
         push_notification('danger', ['Vui lòng nhập vào tên dịch vụ']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        header('Location: /MiuStore/?role=admin&mod=service&action=create');
         die();
         
     }if (empty($price)) {
         push_notification('danger', ['Vui lòng nhập vào giá dịch vụ']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        header('Location: /MiuStore/?role=admin&mod=service&action=create');
         die();
     }
     if (empty($description)) {
         push_notification('danger', ['Vui lòng nhập vào mô tả']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service&action=create');
+        header('Location: /MiuStore/?role=admin&mod=service&action=create');
         die();
        
     }
     create_services($name, $price, $description,$target_file);
     push_notification('success', ['Tạo mới dịch vụ thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=service');
+    header('Location: /MiuStore/?role=admin&mod=service');
 }
 function deleteAction() {
     request_auth(true);
     $id = $_GET['id_service'];
     delete_services($id);
     push_notification('success', ['Xoá dịch vụ thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=service');
+    header('Location: /MiuStore/?role=admin&mod=service');
 }
 function updateAction() {
     request_auth(true);
@@ -58,7 +58,7 @@ function updateAction() {
     if ($service) {
         load_view('update', $data);
     } else {
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=service');
+        header('Location: /MiuStore/?role=admin&mod=service');
     }
 }
 function updatePostAction() {
@@ -83,6 +83,6 @@ function updatePostAction() {
     }
  update_services($data,$id);
  push_notification('success', ['Chỉnh sửa dịch vụ thành công']);
- header('Location: /du_an_1_poly_hotel/?role=admin&mod=service');
+ header('Location: /MiuStore/?role=admin&mod=service');
 }
 ?>

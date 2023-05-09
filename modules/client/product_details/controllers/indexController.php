@@ -28,7 +28,7 @@ function indexAction() {
     if ($production) {
         load_view('index', $data);
     } else {
-        header('Location: /du_an_1_poly_hotel/?role=client');
+        header('Location: /MiuStore/?role=client');
     }
   
 }
@@ -69,9 +69,9 @@ function addCommentsPostAction(){
         ];
       
         add_comments($data);
-        header("location:/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=${product_id}");
+        header("location:/MiuStore/?role=client&mod=product_details&action=index&id=${product_id}");
      }else{
-        header("location:/du_an_1_poly_hotel/?role=client&mod=auth");
+        header("location:/MiuStore/?role=client&mod=auth");
 
      }
    

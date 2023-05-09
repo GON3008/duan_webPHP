@@ -5,30 +5,30 @@
 <div class="user">
     <div class="user1">
         <div class="item1">
-            <img src="public/image/addfb.png" alt="" style="width:200px; margin-left:10px;">
+            <img src="public/image/user.png" alt="" style="width:200px; margin-left:10px;">
             <p style="margin-left:5px;"><?= $_SESSION["auth"]['full_name']  ?></p>
         </div>
         <div class="item2">
             <?php
             if (($_SESSION['auth']['role']) == 2) { ?>
-                <a href="/du_an_1_poly_hotel/?role=admin">Đăng nhập trang quản trị</a>
+                <a href="/MiuStore/?role=admin">Đăng nhập trang quản trị</a>
             <?php } ?>
 
         </div>
         <div class="item3">
-            <a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=index">Giỏ hàng</a>
+            <a href="/MiuStore/?role=client&mod=bill&action=index">Đặt hàng</a>
         </div>
         <div class="item3">
-            <a href="/du_an_1_poly_hotel/?role=client&mod=bill&action=list">Danh sách đặt lịch</a>
+            <a href="/MiuStore/?role=client&mod=bill&action=list">Danh sách đặt lịch</a>
         </div>
         <div class="item4">
             <a href="">Danh sách yêu thích</a>
         </div>
         <div class="item2">
-            <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword">Quên mật khẩu</a>
+            <a href="/MiuStore/?role=client&mod=auth&action=forgotPassword">Quên mật khẩu</a>
         </div>
         <div class="item5">
-            <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=logout">Đăng xuất</a>
+            <a href="/MiuStore/?role=client&mod=auth&action=logout">Đăng xuất</a>
         </div>
     </div>
     <div class="user2">
@@ -90,8 +90,8 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 " style="margin-top: 10px;">
 
                     <!-- <input class="a" type="button" value="Đổi mật khẩu"> -->
-                    <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword" class="b btn btn-primary">Đổi mật khẩu</a>
-                    <a href="/du_an_1_poly_hotel/?role=client&mod=auth&action=edit&id=<?= $_SESSION['auth']['id'] ?>" class="b btn btn-primary">Chỉnh sửa</a>
+                    <a href="/MiuStore/?role=client&mod=auth&action=changePassword" class="b btn btn-primary">Đổi mật khẩu</a>
+                    <a href="/MiuStore/?role=client&mod=auth&action=edit&id=<?= $_SESSION['auth']['id'] ?>" class="b btn btn-primary">Chỉnh sửa</a>
                     <!-- <input class="b" type="button" value="Chỉnh sửa"> -->
                 </div>
             </div>

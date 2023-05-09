@@ -22,7 +22,7 @@ function construct() {
 
     $id=$_GET['id'];
     delete_comment($id);
-    header("location:/du_an_1_poly_hotel/?role=admin&mod=comments");
+    header("location:/MiuStore/?role=admin&mod=comments");
   }
 
 ?>

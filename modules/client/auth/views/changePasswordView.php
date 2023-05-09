@@ -4,7 +4,7 @@
         <div class="container bg-light">
             <div class="row mt-5">
                 <div class="col-md-6 img-login">
-                    <img src="public/image/logopolyhotel.png" class="img-fluid" width="100%" alt="">
+                    <img src="public/image/lgdk.png" class="img-fluid" width="100%" alt="">
                 </div>
                 <div class="col-md-6 mt-5">
                     <h2>Đổi mật khẩu</h2>
@@ -19,7 +19,7 @@
                        </div>
                     </div>
                     <h5 class="text-center mt-2 mb-3">-Hoặc-</h5> -->
-                    <form action="/du_an_1_poly_hotel/?role=client&mod=auth&action=saveChangePassword" method="POST">
+                    <form action="/MiuStore/?role=client&mod=auth&action=saveChangePassword" method="POST">
                         <!-- <div class="form-group">
                              <label for="my-login">Email</label> 
                             <input id="my-login" class="form-control border-bottom"  type="text" name="full_name" placeholder="Họ và tên" >
@@ -61,13 +61,13 @@
                         <div class="form-group">
                             <!-- <label for="my-login">Email</label> -->
                             <input id="my-login" class="form-control border-bottom bg-success text-white"   type="submit" name="" value="Đổi mật khẩu">
-                            <!-- <?php  header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation")?> -->
+                            <!-- <?php  header("location:/MiuStore/?role=client&mod=auth&action=infomation")?> -->
                          
                         </div>
                         
                     </form>
                     <!-- <div style="margin-bottom:40px ;">
-                        Bạn đã có tài khoản? <a href="/du_an_1_poly_hotel/?role=client&mod=auth" style="color:#00a79e;">Đăng nhập</a>
+                        Bạn đã có tài khoản? <a href="/du_an_1_/?role=client&mod=auth" style="color:#00a79e;">Đăng nhập</a>
                     </div> -->
                  
                 </div>

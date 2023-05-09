@@ -22,7 +22,7 @@
                         </div>
 
                         <div class="card-name text col-12">
-                            <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>">
+                            <a href="/MiuStore/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>">
                                 <h2 class="text"><?= $item['name'] ?> </h2>
                             </a>
                             <a href="" class="text-danger" style="float:left ; font-size:20px ;"> <?= $item['price'] ?></a>

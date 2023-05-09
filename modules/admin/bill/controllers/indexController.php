@@ -11,6 +11,13 @@ function indexAction() {
     $data['bill_details'] = get_list_bill_detail();
     load_view('index',$data); 
 }
+function updateAction(){
+    request_auth(true);
+    $id=$_GET['id'];
+    $new_value= 'new value';
+    update_bill_detail($id,$new_value);
+    redirect('index');
+}
 function deleteAction(){
     request_auth(true);
     require_once "mail/index.php";
@@ -36,7 +43,7 @@ function deleteAction(){
     ";
     GuiMail($title, $content, $addressMail);
     push_notification('success', ['Xoá hóa đơn thành công']);
-    header('location:/du_an_1_poly_hotel/?role=admin&mod=bill&action=index');
+    header('location:/MiuStore/?role=admin&mod=bill&action=index');
 
     load_view('delete',$data); 
 

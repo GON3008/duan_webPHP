@@ -26,7 +26,7 @@
                 <h3 class="card-title">Form thông tin sản phẩm mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=production&action=update" enctype="multipart/form-data">
+            <form method="POST" action="/MiuStore/?role=admin&mod=production&action=update" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="form-group">
                         <label>Danh mục sản phẩm</label>
@@ -43,38 +43,38 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Tên phòng</label>
+                        <label>Tên sản phẩm</label>
                         <input type="text" name="name" class="form-control" placeholder="Nhập vào tên phòng" value="<?php echo $production['name'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group">
-                        <label>Ảnh phòng</label>
+                        <label>Ảnh sản phẩm</label>
                         <input type="file" name="image" class="form-control" value="<?php echo $production['image'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group">
-                        <label>Số lượng phòng</label>
+                        <label>Số lượng</label>
                         <input type="text" name="count" class="form-control" placeholder="Nhập vào số lượng phòng" value="<?php echo $production['count'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group">
-                        <label>Giá phòng</label>
+                        <label>Giá</label>
                         <input type="text" name="price" class="form-control" placeholder="Nhập vào giá phòng" value="<?php echo $production['price'] ?>" />
                         <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                     </div>
                     <div class="form-group">
                         
-                        <input type="radio" value="1" name="status" <?= $production['status'] == 1 ? "checked" : "" ?>>Có thể thuê
-                        <input type="radio" value="2" name="status" <?= $production['status'] == 2 ? "checked" : "" ?>>Không thể thuê
+                        <input type="radio" value="1" name="status" <?= $production['status'] == 1 ? "checked" : "" ?>>Có hàng
+                        <input type="radio" value="2" name="status" <?= $production['status'] == 2 ? "checked" : "" ?>>Tạm thời hết hàng
                     </div>
                     <div class="form-group mb-1">
-                        <label for="descriptionCategoryInput">Mô tả phòng</label>
+                        <label for="descriptionCategoryInput">Mô tả sản phẩm</label>
                         <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"><?php echo $production['description'] ?></textarea>
                     </div>
                 </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary mr-2">Chỉnh sửa</button>
-                    <a href="/du_an_1_poly_hotel/?role=admin&mod=production" class="btn btn-default">Quay về</a>
+                    <a href="/MiuStore/?role=admin&mod=production" class="btn btn-default">Quay về</a>
                 </div>
             </form>
             <!--end::Form-->

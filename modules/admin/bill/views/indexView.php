@@ -28,7 +28,7 @@
                     </div>
                     <div class="card-toolbar">
                         <!--begin::Button-->
-                        <a href="/du_an_1_poly_hotel/?role=admin&mod=account&action=create" class="btn btn-primary font-weight-bolder">
+                        <a href="/MiuStore/?role=admin&mod=account&action=create" class="btn btn-primary font-weight-bolder">
                             <span class="svg-icon svg-icon-md">
                                 <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -67,11 +67,11 @@
                         <thead>
                             <tr>
                                 <th title="Field #1" >ID</th>
-                                <th title="Field #1">Tên phòng</th>
+                                <th title="Field #1">Tên sản phẩm</th>
                                 <th title="Field #2">Thông tin</th>
-                                <th title="Field #3">Ngày nhận phòng</th>
-                                <th title="Field #4">Ngày trả phòng</th>
+                                <th title="Field #3">Số lượng</th>
                                 <th title="Field #4">Tổng tiền</th>
+                                <th title="Field #4">Ngày đặt hàng</th>
                                 <th title="Field #5">Hành động</th>
                             </tr>
                         </thead>
@@ -89,12 +89,12 @@
                                         <br>
                                         Địa chỉ:<?php echo ($detail['address']) ?>
                                     </td>
-                                    <td><?php echo ($detail['check_in_date']) ?></td>
-                                    <td><?php echo ($detail['check_out_date']) ?></td>
+                                    <td><?php echo ($detail['order_quantity']) ?></td>
                                     <td><?php echo ($detail['total_money']) ?></td>
+                                    <td><?php echo ($detail['created_at']) ?></td>
                                     <td>
                                         <span style="overflow: visible; position: relative; width: 125px;">
-                                            <a href="/du_an_1_poly_hotel/?role=admin&mod=bill&action=update&id=<?php echo $detail['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <a href="/MiuStore/?role=admin&mod=bill&action=update&id=<?php echo $detail['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                             <rect x="0" y="0" width="24" height="24"></rect>
                                                             <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>
@@ -103,7 +103,7 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            <a href="/du_an_1_poly_hotel/?role=admin&mod=bill&action=delete&id=<?php echo $detail['id'] ?>"  class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <a href="/MiuStore/?role=admin&mod=bill&action=delete&id=<?php echo $detail['id'] ?>"  class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                 <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                     <rect x="0" y="0" width="24" height="24"></rect>
                                                     <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero"></path>

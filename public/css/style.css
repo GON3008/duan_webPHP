@@ -4,25 +4,19 @@ body {
 }
 
 /*Menu*/
-.navbar {
-    background-color: #2b296d !important;
-}
+
 
 .navbar li a {
-    color: white !important;
     font-size: 20px;
     font-weight: bold;
 }
 
-.navbar li a:hover {
-    color: #fdb913 !important;
-}
 
 .bg-color1 {
     background-color: white !important;
 }
 .bg-color{
-    background-color: #2b296d !important;
+    background-color: #ffffff !important;
 }
 .light {
     background-color: #fdb913 !important;
@@ -110,9 +104,7 @@ body {
 
 /*End Content*/
 
-.contact-home {
-    background-image: url(https://tingtong.vn/assets/images/bg2.svg);
-}
+
 
 /* --------------------------------------------- */
 /* thanh làm phần chính sách */
@@ -155,14 +147,9 @@ h2 a:hover {
     width: 100%;
 }
 
-/* end chính sách đổi trả */
-/* ---------------------------------------------------------- */
 
-/*footer*/
-footer {
-    background-color: #2b296d;
-    color: white;
-}
+
+
 
 .text1 {
     color: white;

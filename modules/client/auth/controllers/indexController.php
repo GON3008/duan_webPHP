@@ -21,16 +21,16 @@ function indexPostAction()
     $password = $_POST['password'];
     if (empty($email) || empty($password)) {
         push_notification('danger', ['Vui lòng nhập đầy đủ thông tin tài khoản và mật khẩu']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth');
+        header('Location: /MiuStore/?role=client&mod=auth');
     }
     // xử lý đăng nhập
     $auth = get_auth_user($email, $password);
     if ($auth) {
         push_auth($auth);
-        header('Location: /du_an_1_poly_hotel/?role=client');
+        header('Location: /MiuStore/?role=client');
     } else {
         push_notification('danger', ['Tài khoản hoặc mật khẩu không chính xác']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth');
+        header('Location: /MiuStore/?role=client&mod=auth');
     }
 }
 
@@ -58,7 +58,7 @@ function infomationAction()
     //request_auth(true);
     if (is_auth()) {
         load_view('infomation');
-        header('Location:/du_an_1_poly_hotel/?role=client');
+        // header('Location:/MiuStore/?role=client');
     }
 }
 
@@ -71,7 +71,7 @@ function logoutAction()
 
     if (is_auth()) {
         remove_auth();
-        header('Location:/du_an_1_poly_hotel /?role=client');
+        header('Location:/MiuStore/?role=client');
     }
 }
 function sign_upAction()
@@ -94,30 +94,30 @@ function saveSignUpPostAction()
   
     if (empty($full_name)) {
         push_notification('danger', ['Vui lòng nhập họ và tên']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     }
    else if (empty($password)) {
         push_notification('danger', ['Vui lòng nhập mật khẩu']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     }
     else if ($nhaplaipassword == "") {
         push_notification('danger', ['Vui lòng nhập lại mật khẩu']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     }else if ($nhaplaipassword != $password) {
         push_notification('danger', ['Mật khẩu không trùng khớp']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     } else if (empty($numberphone)) {
         push_notification('danger', ['Vui lòng nhập số điện thoại']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     }
     else if ($gender == "") {
         push_notification('danger', ['Vui lòng nhập giới tính']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
         die();
     }
     
@@ -128,7 +128,7 @@ function saveSignUpPostAction()
     ];
         insert_user($data);
         push_notification('success', ['Đăng ký tài khoản thành công']);
-        header('Location: /du_an_1_poly_hotel/?role=client&mod=auth&action=sign_up');
+        header('Location: /MiuStore/?role=client&mod=auth&action=sign_up');
      
     } 
 
@@ -164,7 +164,7 @@ function saveEditPostAction()
     $data = ["full_name" => $full_name, "email" => $email, "numberphone" => $numberphone, "cmnd" => $cmnd];
     update_user($data, $id);
     // push_notification('success', ['Chỉnh sửa danh mục sản phẩm thành công']);
-    header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=infomation");
+    header("location:/MiuStore/?role=client&mod=auth&action=infomation");
     echo "<script> alert('Cập nhập tài khoản thành công. Đăng nhập lại để cập nhật dữ liệu') </script>";
 }
 function changePasswordAction()
@@ -176,7 +176,7 @@ function changePasswordAction()
             "notifications" => $notifications
         ]);
     } else {
-        header("location:/du_an_1_poly_hotel/?role=client&mod=auth");
+        header("location:/MiuStore/?role=client&mod=auth");
     }
 }
 function saveChangePasswordPostAction()
@@ -191,12 +191,12 @@ function saveChangePasswordPostAction()
         // $item=get_auth_user($email, $password_old);
         if(empty($password_old)){
              push_notification('success', ['Mật khẩu cũ không được để trống']);
-            header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+            header("location:/MiuStore/?role=client&mod=auth&action=changePassword");
             die();
         }
         if(empty($password_new)){
             push_notification('success', ['Mật khẩu mới không được để trống']);
-           header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+           header("location:/MiuStore/?role=client&mod=auth&action=changePassword");
            die();
        }
         $sql = "select * from users where email='$email' and password='$password_old' limit 1";
@@ -205,13 +205,13 @@ function saveChangePasswordPostAction()
         if ($count > 0) {
             $sql_update = mysqli_query($conn, "update users set email='$email' , password='$password_new' where email='$email' and password='$password_old'");
             echo "<script> alert('Đổi mật khẩu thành công!!!') </script>";
-            header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+            header("Refresh: 0.5; URL=/MiuStore/?role=client&mod=auth&action=changePassword");
         } else {
             echo "<script> alert('Mật khẩu hiện tại không đúng!!!') </script>";
-            header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=auth&action=changePassword");
+            header("Refresh: 0.5; URL=/MiuStore/?role=client&mod=auth&action=changePassword");
         }
     } else {
-        header("location:/du_an_1_poly_hotel/?role=client&mod=auth");
+        header("location:/MiuStore/?role=client&mod=auth");
     }
 
     // $data=["email"=>$email, "password"=>$password_new];
@@ -266,7 +266,7 @@ function saveForgotPasswordPostAction()
     global $conn;
     if (empty($addressMail)) {
         push_notification('success', ['Vui lòng nhập email!']);
-        header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+        header("location:/MiuStore/?role=client&mod=auth&action=forgotPassword");
     } else {
         $sql = mysqli_query($conn, "select * from users where email = '$addressMail'");
         $row = mysqli_fetch_array($sql);
@@ -285,11 +285,11 @@ function saveForgotPasswordPostAction()
             // update_user($data, $id);
             GuiMail($title, $content, $addressMail);
             push_notification('success', ['Mật khẩu đã được gửi về mail của bạn']);
-            header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+            header("location:/MiuStore/?role=client&mod=auth&action=forgotPassword");
             //header('Location: ?role=client&mod=auth&action=forgotPassword');
         } else {
             push_notification('success', ['Email của bạn không tồn tại trong hệ thống !']);
-            header("location:/du_an_1_poly_hotel/?role=client&mod=auth&action=forgotPassword");
+            header("location:/MiuStore/?role=client&mod=auth&action=forgotPassword");
         }
         
     }

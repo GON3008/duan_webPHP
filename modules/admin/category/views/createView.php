@@ -6,7 +6,7 @@
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mr-2">
                 <!--begin::Page Title-->
-                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới loại phòng</h5>
+                <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới loại sản phẩm</h5>
                 <!--end::Page Title-->
             </div>
             <!--end::Info-->
@@ -21,25 +21,25 @@
             <!--begin::Card-->
             <div class="card card-custom gutter-b example example-compact">
                 <div class="card-header">
-                    <h3 class="card-title">Form thông tin loại phòng mới</h3>
+                    <h3 class="card-title">Form thông tin loại sẩn phẩm mới</h3>
                 </div>
                 <!--begin::Form-->
                 <form method="POST" action="">
                     <div class="card-body">
                         <div class="form-group">
-                            <label>Tên loại phòng</label>
+                            <label>Tên loại sản phẩm</label>
                             <input type="text" name="name" class="form-control" placeholder="Nhập vào tên loại phòng" />
                             <!-- <span class="form-text text-muted">We'll never share your email with anyone else.</span> -->
                         </div>
                         <div class="form-group mb-1">
-                            <label for="descriptionCategoryInput">Mô tả loại phòng</label>
+                            <label for="descriptionCategoryInput">Mô tả loại sản phẩm</label>
                             <textarea name="description" class="form-control" id="descriptionCategoryInput" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                         <button type="reset" class="btn btn-secondary">Làm lại</button>
-                        <a href="/du_an_1_poly_hotel/?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="/MiuStore?role=admin&mod=category" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

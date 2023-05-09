@@ -1,5 +1,4 @@
 <?php
-//Triệu gọi đến file xử lý thông qua request
 
 $request_path = MODULESPATH . DIRECTORY_SEPARATOR . get_role() . DIRECTORY_SEPARATOR .  get_module() . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . get_controller().'Controller.php';
 

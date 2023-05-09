@@ -24,7 +24,7 @@
                     <h3 class="card-title">Form thông tin dịch vụ mới</h3>
                 </div>
                 <!--begin::Form-->
-                <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=service&action=saveCreate" enctype="multipart/form-data">
+                <form method="POST" action="/MiuStore/?role=admin&mod=service&action=saveCreate" enctype="multipart/form-data">
                     <div class="card-body">
                         <div class="form-group">
                             <label>Tên dịch vụ</label>
@@ -48,7 +48,7 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                         <button type="reset" class="btn btn-secondary">Làm lại</button>
-                        <a href="/du_an_1_poly_hotel/?role=admin&mod=service" class="btn btn-default">Quay về</a>
+                        <a href="/MiuStore/?role=admin&mod=service" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

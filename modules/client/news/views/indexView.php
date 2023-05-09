@@ -6,7 +6,7 @@
     <!-- chính sách đổi trả -->
     <div class="container-returnpolicy">
         <div class="row-text-center">
-            <h1><a href="/du_an_1_poly_hotel/?role=client">Trang chủ</a>/ <a href="/du_an_1_poly_hotel/?role=client&mod=Privacy_Policy&action=index">Trang Tin Tức</a></h1>
+            <h1><a href="/MiuStore/?role=client">Trang chủ</a>/ <a href="/MiuStore/?role=client&mod=Privacy_Policy&action=index">Trang Tin Tức</a></h1>
             <div class="col-text">
                 <div class="container-returnpolicy-right">
                     <h1><a href="#">Bài viết</a></h1>
@@ -25,7 +25,7 @@
                             nhận với những thay đổi đó.
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
-                            <img src="./public/image/banner1.png" alt="">
+                            <img src="./public/image/sl3.png" alt="">
 
                             Chào mừng quý khách hàng đến với website chúng tôi.
 
@@ -37,7 +37,7 @@
                             nhận với những thay đổi đó.
 
                             Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
-                            <img src="./public/image/banner3.png" alt="">
+                            <img src="./public/image/sl2.png" alt="">
 
                         </p>
                     </div>
@@ -47,17 +47,17 @@
                     <div class="category">
                         <h2><a href="#">Trang chủ</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=introduce&action=index">Giới thiệu</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=introduce&action=index">Giới thiệu</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=news&action=index">Tin tức</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=news&action=index">Tin tức</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=contact&action=index">Liên hệ</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=contact&action=index">Liên hệ</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=return_Policy&action=index">Chính sách đổi trả</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=return_Policy&action=index">Chính sách đổi trả</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=Privacy_Policy&action=index">Chính sách bảo mật</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=Privacy_Policy&action=index">Chính sách bảo mật</a></h2>
                         <hr>
-                        <h2><a href="/du_an_1_poly_hotel/?role=client&mod=service_Policy&action=index">Chính sách dịch vụ</a></h2>
+                        <h2><a href="/MiuStore/?role=client&mod=service_Policy&action=index">Chính sách dịch vụ</a></h2>
                         <hr>
                         <img src="image/banner3.png" alt="">
                     </div>

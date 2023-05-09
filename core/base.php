@@ -234,13 +234,13 @@ function request_auth($isLogin = true)
     $auth=$_GET['role'];
     $request_role = get_role() === 'admin' ? 2 : 1  ;
     if (is_auth() !== $isLogin) {
-        header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role='. ($auth) . '&mod=auth' : '/du_an_1_poly_hotel/?role=' . ($auth)));
+        header("Location: " . ($isLogin ? '/MiuStore/?role='. ($auth) . '&mod=auth' : '/MiuStore/?role=' . ($auth)));
         die;
     }
     if (is_auth()) {
         $auth = get_auth();
         if ($auth['role'] != $request_role) {
-            header("Location: /du_an_1_poly_hotel/?role=" . ($auth['role'] == 1 ? 'client' : 'admin'));
+            header("Location: /MiuStore/?role=" . ($auth['role'] == 1 ? 'client' : 'admin'));
             die;
         }
     }
@@ -252,7 +252,7 @@ function request_auth($isLogin = true)
 // function request_auth($isLogin = true)
 // {
 //     if (is_auth() !== $isLogin) {
-//         header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role=client&mod=auth' : '/du_an_1_poly_hotel/?role=admin&mod=auth'));
+//         header("Location: " . ($isLogin ? '/du_an_1_poly_hotel/?role=client&mod=auth' : '/du_an_1/?role=admin&mod=auth'));
 //         die;
 //     }
 // }

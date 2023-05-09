@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo mới phòng</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Tạo sản phẩm mới</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -24,16 +24,16 @@
                 <h3 class="card-title">Form thông tin phòng mới</h3>
             </div>
             <!--begin::Form-->
-            <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=production&action=saveCreate" enctype="multipart/form-data">
+            <form method="POST" action="/MiuStore/?role=admin&mod=production&action=saveCreate" enctype="multipart/form-data">
                 <div class="card-body">
                     <div class="row">
                         <div class="col col-12">
                             <div class="form-group">
-                                <label>Tên phòng</label>
+                                <label>Tên sản phẩm</label>
                                 <input type="text" name="name" class="form-control" placeholder="Nhập vào tên phòng" />
                             </div>
                             <div class="form-group">
-                                <label>Danh sách loại phòng</label>
+                                <label>Danh sách loại sản phẩm</label>
                                 <select class="form-control select2" name="category_id">
                                     <?php
                                     foreach ($categories as $category) {
@@ -45,7 +45,7 @@
                                 </select>
                             </div>
                             <div class="form-group mb-1">
-                                <label for="descriptionCategoryInput">Chi tiết phòng</label>
+                                <label for="descriptionCategoryInput">Chi tiết sản phẩm</label>
                                 <textarea name="description" id="kt-ckeditor-1"></textarea>
                             </div>
                         </div>
@@ -63,8 +63,8 @@
                             <div class="form-group">
                                 <label>Trạng thái sản phẩm</label>
                                 <select class="form-control select2" name="status">
-                                    <option value="1">Có thể thuê</option>
-                                    <option value="2">Không thể thuê</option>
+                                    <option value="1">Còn hàng</option>
+                                    <option value="2">Tạm thời hết hàng</option>
                                 </select>
                             </div>
                         </div>

@@ -10,18 +10,18 @@ function GuiMail($title, $content, $addressMail){
         $mail->CharSet  = "utf-8";
         $mail->Host = 'smtp.gmail.com';  //SMTP servers
         $mail->SMTPAuth = true; // Enable authentication
-        $mail->Username = 'thuytxph26691@fpt.edu.vn'; // SMTP username
-        $mail->Password = 'yofcftjywhjkoatt';   // SMTP password
-        $mail->SMTPSecure = 'ssl';  // encryption TLS/SSL 
+        $mail->Username = 'longbt300820@gmail.com'; // SMTP username
+        $mail->Password = '0366570289';   // SMTP password  yofcftjywhjkoatt
+        $mail->SMTPSecure = 'SSL';  // encryption TLS/SSL 
         $mail->Port = 465;  // port to connect to                
-        $mail->setFrom('thuytxph26691@fpt.edu.vn', 'Poly Hotel' ); 
-       // $addressMail='thuytx150403@gmail.com';
+        $mail->setFrom('longbt300820@gmail.com', 'Miu eyeCenter' ); 
+       // $addressMail='';
         $mail->addAddress($addressMail); //mail và tên người nhận  
         $mail->isHTML(true);  // Set email format to HTML
-        //$title="Thủy test mail";
+        //$title="test mail";
         $mail->Subject = $title;
 
-        //$content='Thủy test mail';
+        //$content='test mail';
         $mail->Body = $content;
         $mail->smtpConnect( array(
             "ssl" => array(

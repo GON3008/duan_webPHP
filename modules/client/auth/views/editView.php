@@ -1,6 +1,6 @@
 
 <?php  require "layout/client/header_client.php" ?>
-<form action="/du_an_1_poly_hotel/?role=client&mod=auth&action=saveEdit&id=<?= $list_users['id']; ?>" method="post" enctype="multipart/form-data">
+<form action="/MiuStore/?role=client&mod=auth&action=saveEdit&id=<?= $list_users['id']; ?>" method="post" enctype="multipart/form-data">
 <div class="container">
 <div class="row mt-4">
         <!-- <input type="hidden" name="id"> -->

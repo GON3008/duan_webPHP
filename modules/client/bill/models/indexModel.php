@@ -22,7 +22,10 @@ function get_bill_detail_by_id($created_id){
 
 }
 function get_list_bill_product(){
-    $result = db_fetch_array("SELECT bd.*, p.name as `name` FROM `bill_details` bd INNER JOIN  `productions` p ON bd.product_id = p.id");
+    $result = db_fetch_array("SELECT bd.*, p.name as `name` p.created_at 'created_at' FROM `bill_details` bd INNER JOIN  `productions` p ON bd.product_id = p.id");
+    $id = db_insert('categories', [
+        'created_at' => date('Y-m-d H:i:s')
+    ]);
     return $result;
 }
 function insert_bill($data){

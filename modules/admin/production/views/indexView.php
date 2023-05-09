@@ -6,7 +6,7 @@
         <!--begin::Info-->
         <div class="d-flex align-items-center flex-wrap mr-2">
             <!--begin::Page Title-->
-            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý phòng</h5>
+            <h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Quản lý sản phẩm</h5>
             <!--end::Page Title-->
         </div>
         <!--end::Info-->
@@ -22,13 +22,13 @@
         <div class="card card-custom">
             <div class="card-header flex-wrap border-0 pt-6 pb-0">
                 <div class="card-title">
-                    <h3 class="card-label">Danh sách phòng
-                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách các phòng có trên hệ thống</span>
+                    <h3 class="card-label">Danh sách sản phẩm
+                        <span class="d-block text-muted pt-2 font-size-sm">Danh sách sản phẩm có trên hệ thống</span>
                     </h3>
                 </div>
                 <div class="card-toolbar">
                     <!--begin::Button-->
-                    <a href="/du_an_1_poly_hotel/?role=admin&mod=production&action=create" class="btn btn-primary font-weight-bolder">
+                    <a href="/MiuStore/?role=admin&mod=production&action=create" class="btn btn-primary font-weight-bolder">
                         <span class="svg-icon svg-icon-md">
                             <!--begin::Svg Icon | path:assets/media/svg/icons/Design/Flatten.svg-->
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -66,11 +66,11 @@
                 <table class="datatable datatable-bordered datatable-head-custom" id="kt_datatable">
                     <thead>
                         <tr>
-                            <th title="Field #1">ID phòng</th>
-                            <th title="Field #2">Tên phòng</th>
-                            <th title="Field #2">Ảnh phòng</th>
+                            <th title="Field #1">ID sản phẩm</th>
+                            <th title="Field #2">Tên sản phẩm</th>
+                            <th title="Field #2">Ảnh sản phẩm</th>
                          
-                            <th title="Field #2">Giá phòng</th>
+                            <th title="Field #2">Giá sản phẩm</th>
                             <th title="Field #2">Trạng thái</th>
                             <th title="Field #2">Ngày tạo</th>                           
                             <th title="Field #4">Người tạo</th>
@@ -86,13 +86,16 @@
                                 <td><?php echo ($production['name']) ?></td>
                                 <td><img src="<?php echo ($production['image']) ?>" alt="" width="50"></td>
                                 <td><?php echo ($production['price']) ?></td>
-                                <td><?php echo ($production['status']== 1 ? "Có thể thuê" : "Không thể thuê") ?></td>
+                                <td><?php echo ($production['status']== 1 ? "Còn hàng" : "Tạm thời hết hàng") ?></td>
+                                <td><?php echo ($production['created_at']) ?></td>
+                                <td><?php echo ($production['full_name']) ?></td>
                                
+
                                
                                
                                 <td>
                                     <span style="overflow: visible; position: relative; width: 125px;">
-                                        <a href="/du_an_1_poly_hotel/?role=admin&mod=production&action=update&id=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <a href="/MiuStore/?role=admin&mod=production&action=update&id=<?php echo $production['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Edit details"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                         <rect x="0" y="0" width="24" height="24"></rect>
                                                         <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) "></path>
@@ -101,7 +104,7 @@
                                                 </svg>
                                             </span>
                                         </a>
-                                        <a href="/du_an_1_poly_hotel/?role=admin&mod=production&action=delete&id_prod=<?php echo $production['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá phòng: <?php echo $production['name'] ?> không? Hành động sẽ xoá toàn bộ dữ liệu có trong phòng này.')" class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                        <a href="/MiuStore/?role=admin&mod=production&action=delete&id_prod=<?php echo $production['id'] ?>" onclick="return confirm('Bạn chắc chắn muốn xoá phòng: <?php echo $production['name'] ?> không? Hành động sẽ xoá toàn bộ dữ liệu có trong phòng này.')" class="btn btn-sm btn-clean btn-icon" title="Delete"> <span class="svg-icon svg-icon-md"> <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
                                                         <rect x="0" y="0" width="24" height="24"></rect>
                                                         <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero"></path>
@@ -110,11 +113,7 @@
                                                 </svg> </span> </a>
                                     </span>
                                 </td>
-                                <td><?php echo ($production['full_name']) ?></td>
-                                <td><?php echo ($production['created_at']) ?></td>
                                 <td><?php echo ($production['description']) ?></td>
-
-                               
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

@@ -1,7 +1,7 @@
 
 <!-- 
 <?php //if(isset($_SESSION['auth']) && ($_SESSION['auth']['role']== 1) ){ 
-    //header("location:/du_an_1_poly_hotel/?role=client");   
+    //header("location:/du_an_1/?role=client");   
 //}
 
 ?> -->
@@ -25,8 +25,57 @@
     <div class="d-flex flex-column-fluid">
         <!--begin::Container-->
         <div class="container">
-            
+        <div class="container px-4">
+  <div class="row gx-5">
+    <div class="col">
+     <div style="height: 150px; " class="p-3 border bg-light">
+     <div class="d-flex p-6">
+     <img style="width: 90px;" src="public/image/box.png" alt="">
+     <div>
+     <p style="text-align: center; font-size: 15px;"><?php echo $data['total_orders'] ?></p>
+     <h4>Đơn hàng</h4>
+     </div>
+     </div>
+    </div>
+    </div>
+    <div class="col">
+    <div style="height: 150px; " class="p-3 border bg-light">
+     <div class="d-flex p-6">
+     <img style="width: 90px;" src="public/image/comment (1).png" alt="">
+     <div>
+     <p style="text-align: center; font-size: 15px;"><?php echo $data['total_comments'];?></p>
+     <h4 style="">Bình luận</h4>
+     </div>
+     </div>
+    </div>
+    </div>
+    <div class="col">
+    <div style="height: 150px; " class="p-3 border bg-light">
+     <div class="d-flex p-6">
+     <img style="width: 90px;" src="public/image/group.png" alt="">
+     <div>
+     <p style="text-align: center; font-size: 15px;"><?php echo $data['total_users'];?></p>
+     <h4 style="">Thành viên</h4>
+     </div>
+     </div>
+    </div>
+    </div>
+    <div class="col">
+    <div style="height: 150px; " class="p-3 border bg-light">
+     <div class="d-flex p-6">
+     <img style="width: 90px;" src="public/image/viewers.png" alt="">
+     <div>
+     <p style="text-align: center; font-size: 15px;"><?php echo $data['total_view'];?></p>
+     <h4 style="">Người xem</h4>
+     </div>
+     </div>
+    </div>
+    </div>
+  </div>
+</div>
         </div>
         <!--end::Container-->
+
     </div><!--end::Entry-->
+
 <?php get_footer() ?>

@@ -30,37 +30,37 @@ function saveCreatePostAction(){
     $data=["full_name"=>$full_name, "email"=>$email, "password"=>$password, "role"=>$role, "numberphone"=>$numberphone, "address"=>$address];
     if (empty($full_name)) {
         push_notification('danger', ['Vui lòng nhập vào họ và tên']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     if (empty($email)) {
         push_notification('danger', ['Vui lòng nhập vào email']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     if (empty($password)) {
         push_notification('danger', ['Vui lòng nhập vào mật khẩu']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     if (empty($numberphone)) {
         push_notification('danger', ['Vui lòng nhập vào số điện thoại']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     if (empty($address)) {
         push_notification('danger', ['Vui lòng nhập vào địa chỉ']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     if (empty($role)) {
         push_notification('danger', ['Vui lòng nhập vào vai trò']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=account&action=create');
+        header('Location: /MiuStore/?role=admin&mod=account&action=create');
         die();
     }
     add_user($data);
     push_notification('success', ['Tạo mới tài khoản thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=account');
+    header('Location: /MiuStore/?role=admin&mod=account');
 }
 
 
@@ -69,6 +69,6 @@ function deleteAction() {
     $id=$_GET['id'];
     delete_user($id);
     push_notification('success', ['Xoá tài khoản thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=account');
+    header('Location: /MiuStore/?role=admin&mod=account');
 
 }

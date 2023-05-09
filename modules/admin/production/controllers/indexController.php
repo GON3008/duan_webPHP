@@ -37,21 +37,21 @@ function saveCreatePostAction()
     
     if (empty($name)) {
         push_notification('danger', ['Vui lòng nhập vào tên phòng']);
-        header('Location:/du_an_1_poly_hotel/?role=admin&mod=production&action=create');
+        header('Location:/MiuStore/?role=admin&mod=production&action=create');
         die();
     } if (empty($description)) {
         push_notification('danger', ['Vui lòng nhập vào chi tiết phòng']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=production&action=create');
+        header('Location: /MiuStore/?role=admin&mod=production&action=create');
         die();
     }
      if (empty($price)) {
         push_notification('danger', ['Vui lòng nhập vào giá phòng']);
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=production&action=create');
+        header('Location: /MiuStore/?role=admin&mod=production&action=create');
         die();
     }
     create_production($name, $description, $target_file, $price, $categories, $status);
     push_notification('success', ['Tạo mới sản phẩm thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
+    header('Location: /MiuStore/?role=admin&mod=production');
 }
 
 function deleteAction()
@@ -60,7 +60,7 @@ function deleteAction()
     $id = $_GET['id_prod'];
     delete_production($id);
     push_notification('success', ['Xoá phòng thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
+    header('Location: /MiuStore/?role=admin&mod=production');
 }
 
 function updateAction()
@@ -76,7 +76,7 @@ function updateAction()
     if ($production) {
         load_view('update', $data);
     } else {
-        header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
+        header('Location: /MiuStore/?role=admin&mod=production');
     }
 }
 
@@ -104,5 +104,5 @@ function updatePostAction()
     }
     update_production($data, $id);
     push_notification('success', ['Chỉnh sửa phòng thành công']);
-    header('Location: /du_an_1_poly_hotel/?role=admin&mod=production');
+    header('Location: /MiuStore/?role=admin&mod=production');
 }

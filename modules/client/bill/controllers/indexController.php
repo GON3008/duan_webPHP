@@ -13,7 +13,7 @@ function indexAction()
                   "notifications" => $notifications
             ]);
       } else {
-            header('location:/du_an_1_poly_hotel/?role=client&mod=auth');
+            header('location:/MiuStore/?role=client&mod=auth');
       }
 }
 function indexPostAction()
@@ -41,8 +41,8 @@ function indexPostAction()
                   }
             }
             if ($check) {
-                  echo "<script> alert('Phòng đã được tồn tại trong giỏ hàng.Vui lòng vào giỏ hàng để hoàn thành các bước thanh toán!!!') </script>";
-                  header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=$id");
+                  echo "<script> alert('Sản phẩm đã được tồn tại trong giỏ hàng.Vui lòng vào giỏ hàng để hoàn thành các bước thanh toán!!!') </script>";
+                  header("Refresh: 0.5; URL=/MiuStore/?role=client&mod=product_details&action=index&id=$id");
                   //header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=bill&action=index");
                  
                   die();
@@ -52,7 +52,7 @@ function indexPostAction()
 
             load_view('index');
       } else {
-            header('location:/du_an_1_poly_hotel/?role=client&mod=auth');
+            header('location:/MiuStore/?role=client&mod=auth');
       }
 }
 
@@ -124,12 +124,12 @@ function insertBillPostAction()
                   //push_notification('danger', ['Đặt phòng thành công']);
 
                   // header('location:/du_an_1_poly_hotel/?role=client&mod=bill&action=index');
-                  header("Refresh: 0.1; URL=/du_an_1_poly_hotel/?role=client&mod=bill&action=index");
+                  header("Refresh: 0.1; URL=/MiuStore/?role=client&mod=bill&action=index");
                   echo "<script> alert('Đặt phòng ".$cart['name']." thành công!!!') </script>";
             } else {
                   $check2 = false;
                   echo "<script> alert('Phòng ".$cart['name']." không thể đặt. Do có người đặt trước đó rồi!!!') </script>";
-                  header("Refresh: 0.5; URL=/du_an_1_poly_hotel/?role=client&mod=bill&action=index");
+                  header("Refresh: 0.5; URL=/MiuStore/?role=client&mod=bill&action=index");
             }
       }
       unset($_SESSION['cart']);
@@ -142,7 +142,7 @@ function listAction()
             $data['bill_details'] = get_bill_detail_by_id($created_id);
             load_view('list', $data);
       } else {
-            header('location:/du_an_1_poly_hotel/?role=client&mod=auth');
+            header('location:/MiuStore/?role=client&mod=auth');
       }
 }
 
@@ -157,7 +157,7 @@ function deleteAction()
 
 
      
-      header('location:/du_an_1_poly_hotel/?role=client&mod=bill&action=index');
+      header('location:/MiuStore/?role=client&mod=bill&action=index');
  
 
 }

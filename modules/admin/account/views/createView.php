@@ -24,7 +24,7 @@
                     <h3 class="card-title">Form thông tin tài khoản mới</h3>
                 </div>
                 <!--begin::Form-->
-                <form method="POST" action="/du_an_1_poly_hotel/?role=admin&mod=account&action=saveCreate">
+                <form method="POST" action="/MiuStore/?role=admin&mod=account&action=saveCreate">
                     <div class="card-body">
                         <div class="form-group">
                             <label>Họ và tên</label>
@@ -65,7 +65,7 @@
                     <div class="card-footer">
                         <button type="submit" class="btn btn-primary mr-2">Tạo mới</button>
                         <button type="reset" class="btn btn-secondary">Làm lại</button>
-                        <a href="/du_an_1_poly_hotel/?role=admin&mod=category" class="btn btn-default">Quay về</a>
+                        <a href="/MiuStore/?role=admin&mod=category" class="btn btn-default">Quay về</a>
                     </div>
                 </form>
                 <!--end::Form-->

@@ -6,7 +6,7 @@
  <!----------------------------------------------------------------------------------------------------->
     <!--Form Search-->
     <div class="container">
-    <form action="/du_an_1_poly_hotel/?role=client&mod=search&action=index" method="POST">
+    <form action="/MiuStore/?role=client&mod=search&action=index" method="POST">
         <div class="row mt-4">
             <div class="form-group col-md-9 col-sm-12 mt-2">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -36,27 +36,17 @@
          
             <div class="card-body">
              
-            <form action="/du_an_1_poly_hotel/?role=client&mod=bill&action=index" method="post">
+            <form action="/MiuStore/?role=client&mod=carts&action=index" method="post">
                <div>
             <h2 value=""> <?= $productions['name']?></h2>
-            <p>Địa chỉ: Trịnh Văn Bô, Hà Nội</p>
+            <p></p>
           </div>
               <input type="hidden" name="id" value="<?= $productions['id'] ?>">
               <h3>Giá:$<?= $productions['price']?></h3> 
               <hr>
               <label for="order_quantity">Số lượng:</label>
-                <input type="number" name="order_quantity" id="order_quantity" required>
-            <!-- <div class="form-group">
-                  <label for="my-input">Ngày nhận phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="check_in_date" required>
-                </div>
-
-                <div class="form-group">
-                  <label for="my-input">Ngày trả phòng</label>
-                  <input id="my-input" class="form-control" type="date" name="check_out_date" required>
-                </div> -->
-
-
+                <input type="number" name="order_quantity" min="1" value="0" id="order_quantity" required>
+    
                 <hr>
                 <div class="d-flex justify-content-between">
                 <button type="submit" class="btn bg-success col-md-4">Thêm vào giỏ hàng</button>
@@ -117,7 +107,7 @@
       </div>
 
       <?php if(is_auth()){?>
-        <form action="/du_an_1_poly_hotel/?role=client&mod=product_details&action=addComments&id=<?= $productions['id'] ?>" method="post">
+        <form action="/MiuStore/?role=client&mod=product_details&action=addComments&id=<?= $productions['id'] ?>" method="post">
       <div class="row">
           <div class=" col-md-10 mt-1">
             <input id="my-input" class="form-control" type="text" name="description" placeholder="Bình luận">
@@ -128,7 +118,7 @@
       </div>
       </form>
       <?php }else{ ?>
-              <h5 style="margin-bottom:10px;"> Vui lòng đăng nhập để bình luận <a href="/du_an_1_poly_hotel/?role=client&mod=auth">Đăng nhập</a></h5>
+              <h5 style="margin-bottom:10px;"> Vui lòng đăng nhập để bình luận <a href="/MiuStore/?role=client&mod=auth">Đăng nhập</a></h5>
       <?php } ?>
     </div>
     <!--End form bình luận-->
@@ -149,7 +139,7 @@
             foreach($pro_cat as $item) :
              
              ?>
-                <a href="/du_an_1_poly_hotel/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>"> <h2 class="text">🏡<?= $item['name'] ?></h2></a>
+                <a href="/MiuStore/?role=client&mod=product_details&action=index&id=<?= $item['id'] ?>"> <h2 class="text">🏡<?= $item['name'] ?></h2></a>
                 
                 <?php endforeach ?>
              </div>
