@@ -34,6 +34,8 @@ function insert_bill($data){
 function insert_bill_detail($data){
     db_insert("bill_details", $data);
 }
-
-
+function get_total_bill_id(){
+    $result = db_fetch_row("SELECT bill_id, COUNT(*) AS num_orders FROM bill_details GROUP BY bill_id");
+    return $result; 
+}
 ?>

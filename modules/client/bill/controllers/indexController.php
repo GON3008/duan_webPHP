@@ -161,3 +161,25 @@ function deleteAction()
  
 
 }
+// function show_total_order(){
+//       $data['bill_details'] = get_list_bill_detail();
+//       $orders_num = get_total_bill_id();
+//       if(isset($orders_num['num_orders'])){
+//             $data['num_orders'] = $orders_num['num_orders'];
+//       }else{
+//             $data['num_orders']= 0;
+//       }
+//       load_view('total_bil_id', $data);
+// }
+function show_total_order() {
+      $data['bill_details'] = get_list_bill_detail();
+      $orders_num = get_total_bill_id();
+      if (isset($orders_num['num_orders'])) {
+          $data['num_orders'] = $orders_num['num_orders'];
+      } else {
+          $data['num_orders'] = 0;
+      }
+      load_view('total_bil_id', $data);
+  }
+  
+
